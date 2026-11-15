@@ -1,0 +1,502 @@
+{"id": "en-37021e1328", "text": "Urgent: Vienna outlet worst sellers STD", "intent": "worst_sellers", "slots": {"period": "SEASON_TO_DATE", "store": "VIENNA OUTLET"}, "lang": "en"}
+{"id": "en-745a50ad23", "text": "Please worst top 5 menswear products this season thanks", "intent": "worst_sellers", "slots": {"gender": "MEN", "period": "THIS_SEASON", "n": 5}, "lang": "en"}
+{"id": "en-31e91323e8", "text": "Q: Central Mall store kidswear stock units", "intent": "stock", "slots": {"gender": "KIDS", "store": "CENTRAL MALL STORE"}, "lang": "en"}
+{"id": "en-8e2bfb45eb", "text": "How many shoes do we have left?", "intent": "stock", "slots": {"product_group": "SHOES"}, "lang": "en"}
+{"id": "en-58aef6ef0b", "text": "riverside men's broken size list today", "intent": "broken_sizes", "slots": {"gender": "MEN", "store": "RIVERSIDE"}, "lang": "en"}
+{"id": "en-399cfbf22d", "text": "Womenswear handbags Central Mall shipment status asap", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "BAG", "store": "CENTRAL MALL"}, "lang": "en"}
+{"id": "en-987f45cc53", "text": "luggage soh at manchester high street", "intent": "stock", "slots": {"product_group": "LUGGAGE", "store": "MANCHESTER HIGH STREET"}, "lang": "en"}
+{"id": "en-a6c0fb2dbf", "text": "Please girls' jackets gross profit STD asap", "intent": "margin", "slots": {"gender": "GIRLS", "product_group": "JACKET", "period": "SEASON_TO_DATE"}, "lang": "en"}
+{"id": "en-7abe397b23", "text": "Q: menswear returns units in May", "intent": "returns", "slots": {"gender": "MEN", "period": "MONTH:05"}, "lang": "en"}
+{"id": "en-fd92b44054", "text": "any supplier delays on skirts asap", "intent": "order_eta", "slots": {"product_group": "SKIRT"}, "lang": "en"}
+{"id": "en-a2cbc5930e", "text": "mens outerwear plan vs actual thanks", "intent": "budget_otb", "slots": {"gender": "MEN", "product_group": "OUTERWEAR"}, "lang": "en"}
+{"id": "en-39379713c2", "text": "hey, riverside worst sellers in the last 7 days pls", "intent": "worst_sellers", "slots": {"period": "LAST_7_DAYS", "store": "RIVERSIDE"}, "lang": "en"}
+{"id": "en-7c70ed8a7d", "text": "Hey, which stores are missing women's belts sizes", "intent": "broken_sizes", "slots": {"gender": "WOMEN", "product_group": "BELT"}, "lang": "en"}
+{"id": "en-b8c1f5fd33", "text": "Urgent: baby in week 45 budget achievement today", "intent": "budget_otb", "slots": {"gender": "BABY", "period": "WEEK:45"}, "lang": "en"}
+{"id": "en-b0eedc5a0a", "text": "WTD boyswear average selling price", "intent": "price_discount", "slots": {"gender": "BOYS", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-ce87d9ee19", "text": "Urgent: Leeds high street menswear capacity", "intent": "capacity", "slots": {"gender": "MEN", "store": "LEEDS HIGH STREET"}, "lang": "en"}
+{"id": "en-31e3858732", "text": "Please boyswear returns units W46 today", "intent": "returns", "slots": {"gender": "BOYS", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-6b2dc2f319", "text": "Urgent: boyswear intake Black Friday week?", "intent": "order_eta", "slots": {"gender": "BOYS", "period": "WEEK:BLACK_FRIDAY"}, "lang": "en"}
+{"id": "en-97e3612029", "text": "Hey, 1329 rank in underwear sales pls", "intent": "store_ranking", "slots": {"product_group": "UNDERWEAR", "store": "1329"}, "lang": "en"}
+{"id": "en-28faf1f191", "text": "Hey, boyswear stock left after old season returns", "intent": "returns", "slots": {"gender": "BOYS", "season": "OLD"}, "lang": "en"}
+{"id": "en-3665c51b39", "text": "t-shirts SOH at 1018 thanks", "intent": "stock", "slots": {"product_group": "TSHIRT", "store": "1018"}, "lang": "en"}
+{"id": "en-502b4ba5d6", "text": "all-department returns units over the weekend", "intent": "returns", "slots": {"gender": "ALL", "period": "WEEKEND"}, "lang": "en"}
+{"id": "en-7d24794db9", "text": "Hi, how many units can Copenhagen outlet hold in mens", "intent": "capacity", "slots": {"gender": "MEN", "store": "COPENHAGEN OUTLET"}, "lang": "en"}
+{"id": "en-23bfa55781", "text": "Urgent: kidswear socks weeks of cover", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "SOCKS"}, "lang": "en"}
+{"id": "en-4334b29aeb", "text": "Hi, chinos price points asap", "intent": "price_discount", "slots": {"product_group": "CHINO"}, "lang": "en"}
+{"id": "en-4261ee6cef", "text": "hey, menswear slippers delivery status", "intent": "shipment_status", "slots": {"gender": "MEN", "product_group": "SLIPPERS"}, "lang": "en"}
+{"id": "en-4b4c776ace", "text": "Hey, leading scarves style in December", "intent": "top_sellers", "slots": {"product_group": "SCARF", "period": "MONTH:12"}, "lang": "en"}
+{"id": "en-3451bb7d68", "text": "Hi, Oxford Street store menswear outerwear sell through to date today", "intent": "sell_through", "slots": {"gender": "MEN", "product_group": "OUTERWEAR", "store": "OXFORD STREET STORE"}, "lang": "en"}
+{"id": "en-b1731cfcb4", "text": "q: worst 20 girls' products today?", "intent": "worst_sellers", "slots": {"gender": "GIRLS", "period": "TODAY", "n": 20}, "lang": "en"}
+{"id": "en-d1230d30c0", "text": "Quick one: all-department sales in units today pls", "intent": "sales", "slots": {"gender": "ALL", "period": "TODAY", "measure": "UNITS"}, "lang": "en"}
+{"id": "en-8969a36eef", "text": "leading jackets style last two weeks?", "intent": "top_sellers", "slots": {"product_group": "JACKET", "period": "LAST_2_WEEKS"}, "lang": "en"}
+{"id": "en-5c83705e76", "text": "on marketplaces budget variance last month?", "intent": "budget_otb", "slots": {"period": "LAST_MONTH", "channel": "MARKETPLACE"}, "lang": "en"}
+{"id": "en-48841f4ffd", "text": "Quick one: which stores are missing girlswear coats sizes?", "intent": "broken_sizes", "slots": {"gender": "GIRLS", "product_group": "COAT"}, "lang": "en"}
+{"id": "en-72467ff2c0", "text": "girls' intake last 4 weeks?", "intent": "order_eta", "slots": {"gender": "GIRLS", "period": "LAST_4_WEEKS"}, "lang": "en"}
+{"id": "en-9d180455b5", "text": "Urgent: menswear returns units week 42 asap", "intent": "returns", "slots": {"gender": "MEN", "period": "WEEK:42"}, "lang": "en"}
+{"id": "en-a316afb7de", "text": "Urgent: last week girlswear average selling price", "intent": "price_discount", "slots": {"gender": "GIRLS", "period": "LAST_WEEK"}, "lang": "en"}
+{"id": "en-39153873e2", "text": "Hey, week 38 mens average selling price today", "intent": "price_discount", "slots": {"gender": "MEN", "period": "WEEK:38"}, "lang": "en"}
+{"id": "en-c4bcedfdd3", "text": "this week boys' average selling price", "intent": "price_discount", "slots": {"gender": "BOYS", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-09c63a6489", "text": "can you check outerwear last month vs budget percentage change pls", "intent": "growth", "slots": {"product_group": "OUTERWEAR", "period": "LAST_MONTH", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-bfe19c4f34", "text": "urgent: any supplier delays on footwear pls", "intent": "order_eta", "slots": {"product_group": "SHOES"}, "lang": "en"}
+{"id": "en-5343834c33", "text": "any supplier delays on trousers", "intent": "order_eta", "slots": {"product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-3e9b378d37", "text": "Hey, jeans price points thanks", "intent": "price_discount", "slots": {"product_group": "JEANS"}, "lang": "en"}
+{"id": "en-280933cd52", "text": "Urgent: Harbour branch girls' capacity pls", "intent": "capacity", "slots": {"gender": "GIRLS", "store": "HARBOUR BRANCH"}, "lang": "en"}
+{"id": "en-581ac9107f", "text": "how many units can dublin high street hold in womenswear?", "intent": "capacity", "slots": {"gender": "WOMEN", "store": "DUBLIN HIGH STREET"}, "lang": "en"}
+{"id": "en-1715ac650b", "text": "boys' pants forward cover asap", "intent": "cover", "slots": {"gender": "BOYS", "product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-77091bc747", "text": "Hi, Kings Road store rank in trousers sales?", "intent": "store_ranking", "slots": {"product_group": "TROUSERS", "store": "KINGS ROAD STORE"}, "lang": "en"}
+{"id": "en-53b25de696", "text": "hey, coat gmroi please", "intent": "margin", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-18713594d9", "text": "can you check girls' returns units last 7 days?", "intent": "returns", "slots": {"gender": "GIRLS", "period": "LAST_7_DAYS"}, "lang": "en"}
+{"id": "en-59caa20121", "text": "Hi, girlswear profitability in May", "intent": "margin", "slots": {"gender": "GIRLS", "period": "MONTH:05"}, "lang": "en"}
+{"id": "en-38eb7aa111", "text": "1167 mens capacity please", "intent": "capacity", "slots": {"gender": "MEN", "store": "1167"}, "lang": "en"}
+{"id": "en-f9bb53e4e8", "text": "worst top 20 men's products this summer season?", "intent": "worst_sellers", "slots": {"gender": "MEN", "period": "SEASON:SUMMER", "n": 20}, "lang": "en"}
+{"id": "en-f123b2b260", "text": "Hi, pants GMROI thanks", "intent": "margin", "slots": {"product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-c446f03b8f", "text": "Please any supplier delays on skirts asap", "intent": "order_eta", "slots": {"product_group": "SKIRT"}, "lang": "en"}
+{"id": "en-b1e77986e3", "text": "Hey, menswear sales in gross profit week 38 please", "intent": "sales", "slots": {"gender": "MEN", "period": "WEEK:38", "measure": "MARGIN"}, "lang": "en"}
+{"id": "en-3ae7a1ff3b", "text": "Ankara flagship mens broken size list today", "intent": "broken_sizes", "slots": {"gender": "MEN", "store": "ANKARA FLAGSHIP"}, "lang": "en"}
+{"id": "en-94f2409add", "text": "q: how is vienna high street doing vs plan this summer season", "intent": "growth", "slots": {"period": "SEASON:SUMMER", "comparison": "PLAN", "store": "VIENNA HIGH STREET"}, "lang": "en"}
+{"id": "en-e10789905a", "text": "Where should Dublin send its accessories please", "intent": "transfer", "slots": {"product_group": "ACCESSORIES", "store": "DUBLIN"}, "lang": "en"}
+{"id": "en-3c91ba2ec9", "text": "Can you check what was sent to Milan Black Friday week please", "intent": "shipment_status", "slots": {"period": "WEEK:BLACK_FRIDAY", "store": "MILAN"}, "lang": "en"}
+{"id": "en-f1ab4f7371", "text": "boys' intake this month today", "intent": "order_eta", "slots": {"gender": "BOYS", "period": "THIS_MONTH"}, "lang": "en"}
+{"id": "en-58b8813319", "text": "worst 5 womenswear products this season", "intent": "worst_sellers", "slots": {"gender": "WOMEN", "period": "THIS_SEASON", "n": 5}, "lang": "en"}
+{"id": "en-770eb350c2", "text": "hi, women's accessories delivery status today", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "ACCESSORIES"}, "lang": "en"}
+{"id": "en-662c075272", "text": "can you check wholesale growth rate in june vs ly", "intent": "growth", "slots": {"period": "MONTH:06", "channel": "WHOLESALE", "comparison": "LY"}, "lang": "en"}
+{"id": "en-8201a93a64", "text": "Quick one: gilets wk40 vs LY percentage change?", "intent": "growth", "slots": {"product_group": "VEST", "period": "WEEK:40", "comparison": "LY"}, "lang": "en"}
+{"id": "en-cfb3de7aa9", "text": "pyjamas price points pls", "intent": "price_discount", "slots": {"product_group": "PYJAMAS"}, "lang": "en"}
+{"id": "en-2f79cac199", "text": "Hey, kidswear autumn sell-through today", "intent": "sell_through", "slots": {"gender": "KIDS", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-f1d3000fb3", "text": "quick one: basic tees woc?", "intent": "cover", "slots": {"product_group": "BASIC_TSHIRT"}, "lang": "en"}
+{"id": "en-e5a7d58c4e", "text": "hey, in outlets growth rate last 4 weeks vs last year?", "intent": "growth", "slots": {"period": "LAST_4_WEEKS", "channel": "OUTLET", "comparison": "LY"}, "lang": "en"}
+{"id": "en-27632d8e0a", "text": "Menswear intake today", "intent": "order_eta", "slots": {"gender": "MEN", "period": "TODAY"}, "lang": "en"}
+{"id": "en-88a1d20d9b", "text": "urgent: jackets yesterday against target percentage change today", "intent": "growth", "slots": {"product_group": "JACKET", "period": "YESTERDAY", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-c30900643c", "text": "q: trousers price points today", "intent": "price_discount", "slots": {"product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-ef4c298ecb", "text": "Hi, kids' autumn sell-through?", "intent": "sell_through", "slots": {"gender": "KIDS", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-58f043cf06", "text": "can you check women's profitability mtd asap", "intent": "margin", "slots": {"gender": "WOMEN", "period": "THIS_MONTH"}, "lang": "en"}
+{"id": "en-877ee473d4", "text": "Q: average markdown MTD", "intent": "price_discount", "slots": {"period": "THIS_MONTH"}, "lang": "en"}
+{"id": "en-bcfc9de53f", "text": "Please worst top 5 kidswear products YTD", "intent": "worst_sellers", "slots": {"gender": "KIDS", "period": "YTD", "n": 5}, "lang": "en"}
+{"id": "en-7be0c8c083", "text": "q: boys' socks gross profit in november?", "intent": "margin", "slots": {"gender": "BOYS", "product_group": "SOCKS", "period": "MONTH:11"}, "lang": "en"}
+{"id": "en-0e5c84d99b", "text": "womenswear handbags forward cover", "intent": "cover", "slots": {"gender": "WOMEN", "product_group": "BAG"}, "lang": "en"}
+{"id": "en-59343750ad", "text": "Please Soho branch worst sellers in week 45", "intent": "worst_sellers", "slots": {"period": "WEEK:45", "store": "SOHO BRANCH"}, "lang": "en"}
+{"id": "en-7da607a4e1", "text": "total blouses weeks of cover", "intent": "cover", "slots": {"gender": "ALL", "product_group": "BLOUSE"}, "lang": "en"}
+{"id": "en-198fc10dfa", "text": "Hi, in stores budget variance in March?", "intent": "budget_otb", "slots": {"period": "MONTH:03", "channel": "STORES"}, "lang": "en"}
+{"id": "en-0bd6628b05", "text": "kids' hoodies delivery status", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "SWEATSHIRT"}, "lang": "en"}
+{"id": "en-2ada1fe5ff", "text": "women's jumpers Bluewater store shipment status", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "SWEATER", "store": "BLUEWATER STORE"}, "lang": "en"}
+{"id": "en-b2b726b275", "text": "Quick one: on e-commerce budget variance W46?", "intent": "budget_otb", "slots": {"period": "WEEK:46", "channel": "ECOMMERCE"}, "lang": "en"}
+{"id": "en-ddf759b714", "text": "quick one: porto high street men's capacity", "intent": "capacity", "slots": {"gender": "MEN", "store": "PORTO HIGH STREET"}, "lang": "en"}
+{"id": "en-6bd29dd666", "text": "kids' winter sell-through?", "intent": "sell_through", "slots": {"gender": "KIDS", "season": "WINTER"}, "lang": "en"}
+{"id": "en-f00b0151aa", "text": "Urgent: average markdown yesterday", "intent": "price_discount", "slots": {"period": "YESTERDAY"}, "lang": "en"}
+{"id": "en-04d4f51bad", "text": "worst top 20 boyswear products in november?", "intent": "worst_sellers", "slots": {"gender": "BOYS", "period": "MONTH:11", "n": 20}, "lang": "en"}
+{"id": "en-ffaac87e4f", "text": "can you check accessories price points today", "intent": "price_discount", "slots": {"product_group": "ACCESSORIES"}, "lang": "en"}
+{"id": "en-5f42c02753", "text": "Women's returns units in April", "intent": "returns", "slots": {"gender": "WOMEN", "period": "MONTH:04"}, "lang": "en"}
+{"id": "en-8bb1ea56a3", "text": "leading pyjamas style in March today", "intent": "top_sellers", "slots": {"product_group": "PYJAMAS", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-1b5bc27e1a", "text": "Hi, ladies' intake in June asap", "intent": "order_eta", "slots": {"gender": "WOMEN", "period": "MONTH:06"}, "lang": "en"}
+{"id": "en-477d44862a", "text": "give me in the last 7 days children's pyjamas sales thanks", "intent": "sales", "slots": {"gender": "KIDS", "product_group": "PYJAMAS", "period": "LAST_7_DAYS"}, "lang": "en"}
+{"id": "en-579a62e715", "text": "yesterday men's average selling price?", "intent": "price_discount", "slots": {"gender": "MEN", "period": "YESTERDAY"}, "lang": "en"}
+{"id": "en-84d7e4c752", "text": "Urgent: all-department returns units in December", "intent": "returns", "slots": {"gender": "ALL", "period": "MONTH:12"}, "lang": "en"}
+{"id": "en-f7823d47e8", "text": "Please City Centre branch boyswear outerwear sell through to date?", "intent": "sell_through", "slots": {"gender": "BOYS", "product_group": "OUTERWEAR", "store": "CITY CENTRE BRANCH"}, "lang": "en"}
+{"id": "en-184d622b60", "text": "urgent: lisbon mall best sellers over the weekend?", "intent": "top_sellers", "slots": {"period": "WEEKEND", "store": "LISBON MALL"}, "lang": "en"}
+{"id": "en-0eccbe63ba", "text": "girls' jumpers plan vs actual", "intent": "budget_otb", "slots": {"gender": "GIRLS", "product_group": "SWEATER"}, "lang": "en"}
+{"id": "en-b8bc7ddf2c", "text": "1659 women's stock units please", "intent": "stock", "slots": {"gender": "WOMEN", "store": "1659"}, "lang": "en"}
+{"id": "en-afbb23c2b8", "text": "How many units can Copenhagen mall hold in menswear?", "intent": "capacity", "slots": {"gender": "MEN", "store": "COPENHAGEN MALL"}, "lang": "en"}
+{"id": "en-ac46ac15a3", "text": "Hi, in January boys' average selling price", "intent": "price_discount", "slots": {"gender": "BOYS", "period": "MONTH:01"}, "lang": "en"}
+{"id": "en-dfa10412f2", "text": "Urgent: Central Mall branch men's beanies sell through to date asap", "intent": "sell_through", "slots": {"gender": "MEN", "product_group": "BEANIE", "store": "CENTRAL MALL BRANCH"}, "lang": "en"}
+{"id": "en-fd9596198e", "text": "urgent: mens returns units in september", "intent": "returns", "slots": {"gender": "MEN", "period": "MONTH:09"}, "lang": "en"}
+{"id": "en-8294d33fb2", "text": "hi, total shoes delivery status?", "intent": "shipment_status", "slots": {"gender": "ALL", "product_group": "SHOES"}, "lang": "en"}
+{"id": "en-98060b483b", "text": "soho boyswear capacity today", "intent": "capacity", "slots": {"gender": "BOYS", "store": "SOHO"}, "lang": "en"}
+{"id": "en-13eb99fef5", "text": "q: vests week to date vs last year percentage change asap", "intent": "growth", "slots": {"product_group": "VEST", "period": "THIS_WEEK", "comparison": "LY"}, "lang": "en"}
+{"id": "en-9c44a6af83", "text": "Please overcoats price points asap", "intent": "price_discount", "slots": {"product_group": "OVERCOAT"}, "lang": "en"}
+{"id": "en-31260dee04", "text": "q: in july girlswear average selling price", "intent": "price_discount", "slots": {"gender": "GIRLS", "period": "MONTH:07"}, "lang": "en"}
+{"id": "en-e92fa5b90b", "text": "Hi, stores overstocked on boys' jackets", "intent": "transfer", "slots": {"gender": "BOYS", "product_group": "JACKET"}, "lang": "en"}
+{"id": "en-d1c1879404", "text": "Dublin best sellers wk40 thanks", "intent": "top_sellers", "slots": {"period": "WEEK:40", "store": "DUBLIN"}, "lang": "en"}
+{"id": "en-36c8886bfc", "text": "Hi, menswear skirts forward cover asap", "intent": "cover", "slots": {"gender": "MEN", "product_group": "SKIRT"}, "lang": "en"}
+{"id": "en-56ab6407c9", "text": "hamburg high street boys' stock units thanks", "intent": "stock", "slots": {"gender": "BOYS", "store": "HAMBURG HIGH STREET"}, "lang": "en"}
+{"id": "en-257d9be4d0", "text": "Can you check 1068 all-department stock units", "intent": "stock", "slots": {"gender": "ALL", "store": "1068"}, "lang": "en"}
+{"id": "en-575c722775", "text": "Quick one: jumpers SOH at Lyon mall?", "intent": "stock", "slots": {"product_group": "SWEATER", "store": "LYON MALL"}, "lang": "en"}
+{"id": "en-2e9989b795", "text": "Urgent: Covent Garden store worst sellers in July?", "intent": "worst_sellers", "slots": {"period": "MONTH:07", "store": "COVENT GARDEN STORE"}, "lang": "en"}
+{"id": "en-035a03882d", "text": "Please men's returns units in March", "intent": "returns", "slots": {"gender": "MEN", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-c7ccebf392", "text": "can you check overcoats sales wholesale season to date asap", "intent": "sales", "slots": {"product_group": "OVERCOAT", "period": "SEASON_TO_DATE", "channel": "WHOLESALE"}, "lang": "en"}
+{"id": "en-15c6965971", "text": "womenswear bags plan vs actual", "intent": "budget_otb", "slots": {"gender": "WOMEN", "product_group": "BAG"}, "lang": "en"}
+{"id": "en-4947a9b163", "text": "Hi, boys' sales in sales value in week 45?", "intent": "sales", "slots": {"gender": "BOYS", "period": "WEEK:45", "measure": "REVENUE"}, "lang": "en"}
+{"id": "en-58106d0085", "text": "in full-price stores budget variance wk40?", "intent": "budget_otb", "slots": {"period": "WEEK:40", "channel": "FULL_PRICE_STORES"}, "lang": "en"}
+{"id": "en-e99fc3700e", "text": "womenswear luggage weeks of cover", "intent": "cover", "slots": {"gender": "WOMEN", "product_group": "LUGGAGE"}, "lang": "en"}
+{"id": "en-d142cd93cf", "text": "Can you check kidswear stock left after fall returns", "intent": "returns", "slots": {"gender": "KIDS", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-13de975049", "text": "Kings Road store women's broken size list today", "intent": "broken_sizes", "slots": {"gender": "WOMEN", "store": "KINGS ROAD STORE"}, "lang": "en"}
+{"id": "en-295b532561", "text": "footwear woc", "intent": "cover", "slots": {"product_group": "SHOES"}, "lang": "en"}
+{"id": "en-695c52e2e5", "text": "Can you check leading hoodies style in March", "intent": "top_sellers", "slots": {"product_group": "SWEATSHIRT", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-9ae064b8cb", "text": "Urgent: Warsaw flagship worst sellers in the winter season", "intent": "worst_sellers", "slots": {"period": "SEASON:WINTER", "store": "WARSAW FLAGSHIP"}, "lang": "en"}
+{"id": "en-e7779fd7cb", "text": "hi, give me in the winter season kidswear pyjamas sales", "intent": "sales", "slots": {"gender": "KIDS", "product_group": "PYJAMAS", "period": "SEASON:WINTER"}, "lang": "en"}
+{"id": "en-26980af401", "text": "Hi, what was sent to 1741 in November asap", "intent": "shipment_status", "slots": {"period": "MONTH:11", "store": "1741"}, "lang": "en"}
+{"id": "en-65a248c153", "text": "Quick one: boys' vests weeks of cover please", "intent": "cover", "slots": {"gender": "BOYS", "product_group": "VEST"}, "lang": "en"}
+{"id": "en-8d43dd619f", "text": "fastest growing stores versus last year w46?", "intent": "store_ranking", "slots": {"period": "WEEK:46", "comparison": "LY"}, "lang": "en"}
+{"id": "en-2a8db8ed93", "text": "1716 boyswear capacity pls", "intent": "capacity", "slots": {"gender": "BOYS", "store": "1716"}, "lang": "en"}
+{"id": "en-914ae2d5b1", "text": "Give me in September all-department accessories sales pls", "intent": "sales", "slots": {"gender": "ALL", "product_group": "ACCESSORIES", "period": "MONTH:09"}, "lang": "en"}
+{"id": "en-8ed76350ef", "text": "average markdown last month?", "intent": "price_discount", "slots": {"period": "LAST_MONTH"}, "lang": "en"}
+{"id": "en-e06340a215", "text": "baby store ranking in april please", "intent": "store_ranking", "slots": {"gender": "BABY", "period": "MONTH:04"}, "lang": "en"}
+{"id": "en-266f73ec8d", "text": "Quick one: womenswear store ranking in the winter season?", "intent": "store_ranking", "slots": {"gender": "WOMEN", "period": "SEASON:WINTER"}, "lang": "en"}
+{"id": "en-99bc5740a5", "text": "Q: ladies' profitability in November?", "intent": "margin", "slots": {"gender": "WOMEN", "period": "MONTH:11"}, "lang": "en"}
+{"id": "en-86c6f4d7ea", "text": "Hey, womenswear YTD budget achievement?", "intent": "budget_otb", "slots": {"gender": "WOMEN", "period": "YTD"}, "lang": "en"}
+{"id": "en-1d034f1403", "text": "has the hats ETA slipped", "intent": "order_eta", "slots": {"product_group": "HAT"}, "lang": "en"}
+{"id": "en-9ff01e30da", "text": "Hi, in concessions growth rate in January vs plan", "intent": "growth", "slots": {"period": "MONTH:01", "channel": "CONCESSION", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-5cf38a367b", "text": "Tees GMROI?", "intent": "margin", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-cbb2e0ed3b", "text": "hey, kids' boots nisantasi store shipment status please", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "BOOTS", "store": "NISANTASI STORE"}, "lang": "en"}
+{"id": "en-cb54e9b32b", "text": "Hey, worst top 5 boys' products MTD pls", "intent": "worst_sellers", "slots": {"gender": "BOYS", "period": "THIS_MONTH", "n": 5}, "lang": "en"}
+{"id": "en-cbc04a3152", "text": "Urgent: how many units can City Centre branch hold in total?", "intent": "capacity", "slots": {"gender": "ALL", "store": "CITY CENTRE BRANCH"}, "lang": "en"}
+{"id": "en-994338d44f", "text": "on marketplaces budget variance last 7 days thanks", "intent": "budget_otb", "slots": {"period": "LAST_7_DAYS", "channel": "MARKETPLACE"}, "lang": "en"}
+{"id": "en-d475e6b536", "text": "urgent: worst top 10 all-department products std?", "intent": "worst_sellers", "slots": {"gender": "ALL", "period": "SEASON_TO_DATE", "n": 10}, "lang": "en"}
+{"id": "en-3cdd0bbfa4", "text": "fastest growing stores versus last year in February", "intent": "store_ranking", "slots": {"period": "MONTH:02", "comparison": "LY"}, "lang": "en"}
+{"id": "en-df591f205e", "text": "Quick one: womenswear slippers forward cover thanks", "intent": "cover", "slots": {"gender": "WOMEN", "product_group": "SLIPPERS"}, "lang": "en"}
+{"id": "en-3165d790ff", "text": "hey, in retail budget variance last 7 days pls", "intent": "budget_otb", "slots": {"period": "LAST_7_DAYS", "channel": "STORES"}, "lang": "en"}
+{"id": "en-9cea93d998", "text": "please 1407 mens capacity", "intent": "capacity", "slots": {"gender": "MEN", "store": "1407"}, "lang": "en"}
+{"id": "en-48b851a49a", "text": "menswear intake last 7 days today", "intent": "order_eta", "slots": {"gender": "MEN", "period": "LAST_7_DAYS"}, "lang": "en"}
+{"id": "en-0f5ca013b8", "text": "outlet budget variance week 42 asap", "intent": "budget_otb", "slots": {"period": "WEEK:42", "channel": "OUTLET"}, "lang": "en"}
+{"id": "en-f86efc42be", "text": "Harbour branch worst sellers W46 today", "intent": "worst_sellers", "slots": {"period": "WEEK:46", "store": "HARBOUR BRANCH"}, "lang": "en"}
+{"id": "en-9291ef88ca", "text": "q: belts in january vs last week percentage change pls", "intent": "growth", "slots": {"product_group": "BELT", "period": "MONTH:01", "comparison": "LAST_WEEK"}, "lang": "en"}
+{"id": "en-7b0aba62ed", "text": "Hi, in stores growth rate WTD vs LY pls", "intent": "growth", "slots": {"period": "THIS_WEEK", "channel": "STORES", "comparison": "LY"}, "lang": "en"}
+{"id": "en-1926ec504a", "text": "swimwear in July against budget percentage change", "intent": "growth", "slots": {"product_group": "SWIMWEAR", "period": "MONTH:07", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-6a318162b6", "text": "boys' denim plan vs actual", "intent": "budget_otb", "slots": {"gender": "BOYS", "product_group": "JEANS"}, "lang": "en"}
+{"id": "en-1e1cd03cb1", "text": "Bluewater boyswear stock units asap", "intent": "stock", "slots": {"gender": "BOYS", "store": "BLUEWATER"}, "lang": "en"}
+{"id": "en-9bee02af55", "text": "Please has the accessories ETA slipped?", "intent": "order_eta", "slots": {"product_group": "ACCESSORIES"}, "lang": "en"}
+{"id": "en-90510a45db", "text": "beanies SOH at Izmir flagship?", "intent": "stock", "slots": {"product_group": "BEANIE", "store": "IZMIR FLAGSHIP"}, "lang": "en"}
+{"id": "en-ae022a3a42", "text": "Hi, men's store ranking yesterday asap", "intent": "store_ranking", "slots": {"gender": "MEN", "period": "YESTERDAY"}, "lang": "en"}
+{"id": "en-f3d31b9496", "text": "Porto outlet total capacity", "intent": "capacity", "slots": {"gender": "ALL", "store": "PORTO OUTLET"}, "lang": "en"}
+{"id": "en-6e80ac9a9d", "text": "Hi, how is Munich mall doing vs budget wk40?", "intent": "growth", "slots": {"period": "WEEK:40", "comparison": "BUDGET", "store": "MUNICH MALL"}, "lang": "en"}
+{"id": "en-b3cc8ae14e", "text": "overcoats price points?", "intent": "price_discount", "slots": {"product_group": "OVERCOAT"}, "lang": "en"}
+{"id": "en-8372584e7d", "text": "q: mens in january budget achievement", "intent": "budget_otb", "slots": {"gender": "MEN", "period": "MONTH:01"}, "lang": "en"}
+{"id": "en-606bab0b21", "text": "belts GMROI", "intent": "margin", "slots": {"product_group": "BELT"}, "lang": "en"}
+{"id": "en-3aa6aa0a24", "text": "fastest growing stores vs last year in May?", "intent": "store_ranking", "slots": {"period": "MONTH:05", "comparison": "LY"}, "lang": "en"}
+{"id": "en-0a4e5b08b2", "text": "Please worst top 20 all-department products this month", "intent": "worst_sellers", "slots": {"gender": "ALL", "period": "THIS_MONTH", "n": 20}, "lang": "en"}
+{"id": "en-591eb8777c", "text": "hi, has the gilets eta slipped", "intent": "order_eta", "slots": {"product_group": "VEST"}, "lang": "en"}
+{"id": "en-441946bd67", "text": "women's tees plan vs actual", "intent": "budget_otb", "slots": {"gender": "WOMEN", "product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-6141f4f6ca", "text": "please in august all-department average selling price today", "intent": "price_discount", "slots": {"gender": "ALL", "period": "MONTH:08"}, "lang": "en"}
+{"id": "en-a44a9c05e6", "text": "La Defense store best sellers this season thanks", "intent": "top_sellers", "slots": {"period": "THIS_SEASON", "store": "LA DEFENSE STORE"}, "lang": "en"}
+{"id": "en-dd49cbdbd1", "text": "Can you check all-department old season sell-through today", "intent": "sell_through", "slots": {"gender": "ALL", "season": "OLD"}, "lang": "en"}
+{"id": "en-27768ffcbb", "text": "Urgent: Riverside best sellers in May?", "intent": "top_sellers", "slots": {"period": "MONTH:05", "store": "RIVERSIDE"}, "lang": "en"}
+{"id": "en-93509fef6b", "text": "please nisantasi branch boys' dresses sell through to date", "intent": "sell_through", "slots": {"gender": "BOYS", "product_group": "DRESS", "store": "NISANTASI BRANCH"}, "lang": "en"}
+{"id": "en-17f7c3fbb0", "text": "trench coats in September against target percentage change pls", "intent": "growth", "slots": {"product_group": "TRENCH_COAT", "period": "MONTH:09", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-be26d45e59", "text": "Please menswear autumn sell-through?", "intent": "sell_through", "slots": {"gender": "MEN", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-0ac65d91da", "text": "Urgent: menswear sweatshirts Lyon flagship shipment status?", "intent": "shipment_status", "slots": {"gender": "MEN", "product_group": "SWEATSHIRT", "store": "LYON FLAGSHIP"}, "lang": "en"}
+{"id": "en-477c8a02cf", "text": "all-department trousers forward cover", "intent": "cover", "slots": {"gender": "ALL", "product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-1c49b47da6", "text": "Nisantasi store girlswear capacity please", "intent": "capacity", "slots": {"gender": "GIRLS", "store": "NISANTASI STORE"}, "lang": "en"}
+{"id": "en-b0ce18307b", "text": "menswear spring sell-through pls", "intent": "sell_through", "slots": {"gender": "MEN", "season": "SPRING"}, "lang": "en"}
+{"id": "en-94b39fbff8", "text": "Hey, ladies' stock left after new season returns?", "intent": "returns", "slots": {"gender": "WOMEN", "season": "NEW"}, "lang": "en"}
+{"id": "en-eba48c2ae5", "text": "hats gmroi asap", "intent": "margin", "slots": {"product_group": "HAT"}, "lang": "en"}
+{"id": "en-6f705c2e8b", "text": "Urgent: 1855 worst sellers MTD pls", "intent": "worst_sellers", "slots": {"period": "THIS_MONTH", "store": "1855"}, "lang": "en"}
+{"id": "en-cfa5868b07", "text": "stores overstocked on women's polo shirts", "intent": "transfer", "slots": {"gender": "WOMEN", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-651efe68ee", "text": "Hey, children's polos delivery status", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-96b8c9cb28", "text": "children's profitability last month today", "intent": "margin", "slots": {"gender": "KIDS", "period": "LAST_MONTH"}, "lang": "en"}
+{"id": "en-9782221084", "text": "Please baby profitability in April pls", "intent": "margin", "slots": {"gender": "BABY", "period": "MONTH:04"}, "lang": "en"}
+{"id": "en-25eb9f9cf8", "text": "Urgent: children's blouses gross profit wk40 pls", "intent": "margin", "slots": {"gender": "KIDS", "product_group": "BLOUSE", "period": "WEEK:40"}, "lang": "en"}
+{"id": "en-718d7f1787", "text": "Q: in retail growth rate season to date vs LY", "intent": "growth", "slots": {"period": "SEASON_TO_DATE", "channel": "STORES", "comparison": "LY"}, "lang": "en"}
+{"id": "en-392c6edfbd", "text": "Please men's pants gross profit in December?", "intent": "margin", "slots": {"gender": "MEN", "product_group": "TROUSERS", "period": "MONTH:12"}, "lang": "en"}
+{"id": "en-f8a68c5662", "text": "kids' stock left after old season returns", "intent": "returns", "slots": {"gender": "KIDS", "season": "OLD"}, "lang": "en"}
+{"id": "en-61520f5a3f", "text": "hey, blouses soh at munich high street pls", "intent": "stock", "slots": {"product_group": "BLOUSE", "store": "MUNICH HIGH STREET"}, "lang": "en"}
+{"id": "en-08fba083e6", "text": "what was sent to Covent Garden in July?", "intent": "shipment_status", "slots": {"period": "MONTH:07", "store": "COVENT GARDEN"}, "lang": "en"}
+{"id": "en-5dab38fe6f", "text": "trench coats GMROI?", "intent": "margin", "slots": {"product_group": "TRENCH_COAT"}, "lang": "en"}
+{"id": "en-8a166193e2", "text": "Hi, Dublin flagship all-department broken size list thanks", "intent": "broken_sizes", "slots": {"gender": "ALL", "store": "DUBLIN FLAGSHIP"}, "lang": "en"}
+{"id": "en-e866783452", "text": "Hey, La Defense boys' jeans sell through to date today", "intent": "sell_through", "slots": {"gender": "BOYS", "product_group": "JEANS", "store": "LA DEFENSE"}, "lang": "en"}
+{"id": "en-8f86077eeb", "text": "can you check how is 1642 doing against budget over the weekend?", "intent": "growth", "slots": {"period": "WEEKEND", "comparison": "BUDGET", "store": "1642"}, "lang": "en"}
+{"id": "en-7121150b9f", "text": "Urgent: children's store ranking STD today", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "SEASON_TO_DATE"}, "lang": "en"}
+{"id": "en-9d16e0e06b", "text": "Q: 1373 ladies' stock units please", "intent": "stock", "slots": {"gender": "WOMEN", "store": "1373"}, "lang": "en"}
+{"id": "en-c66e647556", "text": "kidswear blouses weeks of cover?", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "BLOUSE"}, "lang": "en"}
+{"id": "en-9893976db5", "text": "Quick one: has the tees ETA slipped", "intent": "order_eta", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-fa65d56bd6", "text": "can you check leading handbags style w46", "intent": "top_sellers", "slots": {"product_group": "BAG", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-2bb63c47ed", "text": "Please tunics price points?", "intent": "price_discount", "slots": {"product_group": "TUNIC"}, "lang": "en"}
+{"id": "en-447ecae49c", "text": "all-department outerwear gross profit last quarter?", "intent": "margin", "slots": {"gender": "ALL", "product_group": "OUTERWEAR", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-bdaff9c0ea", "text": "Can you check Central Mall branch best sellers in week 45", "intent": "top_sellers", "slots": {"period": "WEEK:45", "store": "CENTRAL MALL BRANCH"}, "lang": "en"}
+{"id": "en-263dbfac1e", "text": "kidswear beanies delivery status pls", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "BEANIE"}, "lang": "en"}
+{"id": "en-2e3b64665c", "text": "womenswear intake today?", "intent": "order_eta", "slots": {"gender": "WOMEN", "period": "TODAY"}, "lang": "en"}
+{"id": "en-7d2effe285", "text": "Urgent: Porto outlet all-department broken size list please", "intent": "broken_sizes", "slots": {"gender": "ALL", "store": "PORTO OUTLET"}, "lang": "en"}
+{"id": "en-b0edda2399", "text": "hey, has the outerwear eta slipped", "intent": "order_eta", "slots": {"product_group": "OUTERWEAR"}, "lang": "en"}
+{"id": "en-d0c0c009da", "text": "total footwear forward cover", "intent": "cover", "slots": {"gender": "ALL", "product_group": "SHOES"}, "lang": "en"}
+{"id": "en-ab64e1b5aa", "text": "Please children's store ranking last quarter", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-90f840c5da", "text": "Urgent: stores overstocked on mens caps", "intent": "transfer", "slots": {"gender": "MEN", "product_group": "HAT"}, "lang": "en"}
+{"id": "en-ff59714f26", "text": "skirts WOC?", "intent": "cover", "slots": {"product_group": "SKIRT"}, "lang": "en"}
+{"id": "en-f70a8912b4", "text": "Hey, in concessions growth rate this month versus last year please", "intent": "growth", "slots": {"period": "THIS_MONTH", "channel": "CONCESSION", "comparison": "LY"}, "lang": "en"}
+{"id": "en-2158fac652", "text": "Please girlswear gilets forward cover thanks", "intent": "cover", "slots": {"gender": "GIRLS", "product_group": "VEST"}, "lang": "en"}
+{"id": "en-a8a67f0a85", "text": "Hey, socks WOC thanks", "intent": "cover", "slots": {"product_group": "SOCKS"}, "lang": "en"}
+{"id": "en-0805e7f11e", "text": "kidswear profitability yesterday thanks", "intent": "margin", "slots": {"gender": "KIDS", "period": "YESTERDAY"}, "lang": "en"}
+{"id": "en-17f3321f83", "text": "Hi, girls' intake in October asap", "intent": "order_eta", "slots": {"gender": "GIRLS", "period": "MONTH:10"}, "lang": "en"}
+{"id": "en-819dbdf161", "text": "Hi, 1317 worst sellers in March please", "intent": "worst_sellers", "slots": {"period": "MONTH:03", "store": "1317"}, "lang": "en"}
+{"id": "en-3d2e35d2d0", "text": "Can you check Izmir worst sellers in August", "intent": "worst_sellers", "slots": {"period": "MONTH:08", "store": "IZMIR"}, "lang": "en"}
+{"id": "en-4b25d135e8", "text": "Quick one: how many coats do we have left", "intent": "stock", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-d792d55fba", "text": "kids' profitability yesterday?", "intent": "margin", "slots": {"gender": "KIDS", "period": "YESTERDAY"}, "lang": "en"}
+{"id": "en-6f3af6388e", "text": "Hey, Ankara ladies' capacity today", "intent": "capacity", "slots": {"gender": "WOMEN", "store": "ANKARA"}, "lang": "en"}
+{"id": "en-7f4d4c1436", "text": "please which stores are missing women's polos sizes", "intent": "broken_sizes", "slots": {"gender": "WOMEN", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-2e95e8fa4f", "text": "Urgent: women's coat weeks of cover today", "intent": "cover", "slots": {"gender": "WOMEN", "product_group": "COAT"}, "lang": "en"}
+{"id": "en-5998a66373", "text": "Hey, baby cardigans gross profit year to date?", "intent": "margin", "slots": {"gender": "BABY", "product_group": "CARDIGAN", "period": "YTD"}, "lang": "en"}
+{"id": "en-57efacd010", "text": "kids' intake in October", "intent": "order_eta", "slots": {"gender": "KIDS", "period": "MONTH:10"}, "lang": "en"}
+{"id": "en-649c3ab2d6", "text": "Quick one: total intake in April", "intent": "order_eta", "slots": {"gender": "ALL", "period": "MONTH:04"}, "lang": "en"}
+{"id": "en-5937288d8b", "text": "in February kidswear average selling price please", "intent": "price_discount", "slots": {"gender": "KIDS", "period": "MONTH:02"}, "lang": "en"}
+{"id": "en-0889e5c2c9", "text": "hi, how many units can 1777 hold in boys'?", "intent": "capacity", "slots": {"gender": "BOYS", "store": "1777"}, "lang": "en"}
+{"id": "en-5fa35182fb", "text": "week 38 womenswear average selling price pls", "intent": "price_discount", "slots": {"gender": "WOMEN", "period": "WEEK:38"}, "lang": "en"}
+{"id": "en-d8f359f482", "text": "urgent: central mall store baby capacity asap", "intent": "capacity", "slots": {"gender": "BABY", "store": "CENTRAL MALL STORE"}, "lang": "en"}
+{"id": "en-d77275a6a2", "text": "Urgent: tees over the weekend versus last year percentage change pls", "intent": "growth", "slots": {"product_group": "TSHIRT", "period": "WEEKEND", "comparison": "LY"}, "lang": "en"}
+{"id": "en-e857b4b7c3", "text": "Urgent: fastest growing stores vs last week in April?", "intent": "store_ranking", "slots": {"period": "MONTH:04", "comparison": "LAST_WEEK"}, "lang": "en"}
+{"id": "en-b5cd8018b5", "text": "Can you check overcoats this month vs last year percentage change thanks", "intent": "growth", "slots": {"product_group": "OVERCOAT", "period": "THIS_MONTH", "comparison": "LY"}, "lang": "en"}
+{"id": "en-a78571d613", "text": "Quick one: boyswear stock left after new season returns asap", "intent": "returns", "slots": {"gender": "BOYS", "season": "NEW"}, "lang": "en"}
+{"id": "en-4a39854876", "text": "Quick one: what was sent to Copenhagen week 42", "intent": "shipment_status", "slots": {"period": "WEEK:42", "store": "COPENHAGEN"}, "lang": "en"}
+{"id": "en-97777fc294", "text": "1777 worst sellers this month please", "intent": "worst_sellers", "slots": {"period": "THIS_MONTH", "store": "1777"}, "lang": "en"}
+{"id": "en-d3d329bfc8", "text": "Q: shirts WOC today", "intent": "cover", "slots": {"product_group": "SHIRT"}, "lang": "en"}
+{"id": "en-ac4e2d534e", "text": "Can you check kidswear intake last quarter pls", "intent": "order_eta", "slots": {"gender": "KIDS", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-4358b446c3", "text": "urgent: girls' tunics lisbon outlet shipment status", "intent": "shipment_status", "slots": {"gender": "GIRLS", "product_group": "TUNIC", "store": "LISBON OUTLET"}, "lang": "en"}
+{"id": "en-3225f72d05", "text": "Hi, leading jackets style last 7 days?", "intent": "top_sellers", "slots": {"product_group": "JACKET", "period": "LAST_7_DAYS"}, "lang": "en"}
+{"id": "en-e710c8e6ed", "text": "where should Izmir mall send its denim?", "intent": "transfer", "slots": {"product_group": "JEANS", "store": "IZMIR MALL"}, "lang": "en"}
+{"id": "en-17232c9728", "text": "stores overstocked on boys' caps pls", "intent": "transfer", "slots": {"gender": "BOYS", "product_group": "HAT"}, "lang": "en"}
+{"id": "en-18b13c87e2", "text": "Hi, year to date womenswear average selling price", "intent": "price_discount", "slots": {"gender": "WOMEN", "period": "YTD"}, "lang": "en"}
+{"id": "en-db7b173f99", "text": "Can you check girlswear stock left after winter returns please", "intent": "returns", "slots": {"gender": "GIRLS", "season": "WINTER"}, "lang": "en"}
+{"id": "en-a985048bce", "text": "Can you check fastest growing stores against target Black Friday week please", "intent": "store_ranking", "slots": {"period": "WEEK:BLACK_FRIDAY", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-8e4e34e4e6", "text": "please what was sent to old town store in february", "intent": "shipment_status", "slots": {"period": "MONTH:02", "store": "OLD TOWN STORE"}, "lang": "en"}
+{"id": "en-098c4bb27a", "text": "can you check stores overstocked on womenswear shoes", "intent": "transfer", "slots": {"gender": "WOMEN", "product_group": "SHOES"}, "lang": "en"}
+{"id": "en-0f2fab33ff", "text": "Hi, worst top 20 men's products year to date?", "intent": "worst_sellers", "slots": {"gender": "MEN", "period": "YTD", "n": 20}, "lang": "en"}
+{"id": "en-7ed9bd1cd3", "text": "q: belts over the weekend vs budget percentage change please", "intent": "growth", "slots": {"product_group": "BELT", "period": "WEEKEND", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-d2541f18e0", "text": "Urgent: how many coats do we have left?", "intent": "stock", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-ae4a6345f0", "text": "Hi, Harbour branch all-department knitwear sell through to date asap", "intent": "sell_through", "slots": {"gender": "ALL", "product_group": "KNITWEAR", "store": "HARBOUR BRANCH"}, "lang": "en"}
+{"id": "en-c24f3c5f05", "text": "Can you check kids' stock left after winter returns", "intent": "returns", "slots": {"gender": "KIDS", "season": "WINTER"}, "lang": "en"}
+{"id": "en-9c8c0349fe", "text": "trainers GMROI?", "intent": "margin", "slots": {"product_group": "SNEAKERS"}, "lang": "en"}
+{"id": "en-b08604c37d", "text": "Quick one: average markdown in week 45 please", "intent": "price_discount", "slots": {"period": "WEEK:45"}, "lang": "en"}
+{"id": "en-14b8885392", "text": "Average markdown STD", "intent": "price_discount", "slots": {"period": "SEASON_TO_DATE"}, "lang": "en"}
+{"id": "en-db31187662", "text": "Lisbon outlet total fragrance sell through to date", "intent": "sell_through", "slots": {"gender": "ALL", "product_group": "FRAGRANCE", "store": "LISBON OUTLET"}, "lang": "en"}
+{"id": "en-24c2799e0a", "text": "Hi, 1403 women's tunics sell through to date today", "intent": "sell_through", "slots": {"gender": "WOMEN", "product_group": "TUNIC", "store": "1403"}, "lang": "en"}
+{"id": "en-bce7bcb39c", "text": "urgent: give me w46 children's jackets sales pls", "intent": "sales", "slots": {"gender": "KIDS", "product_group": "JACKET", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-0ed1dbe71d", "text": "Munich mall rank in vests sales please", "intent": "store_ranking", "slots": {"product_group": "VEST", "store": "MUNICH MALL"}, "lang": "en"}
+{"id": "en-a080c4095f", "text": "Q: girlswear returns units in September pls", "intent": "returns", "slots": {"gender": "GIRLS", "period": "MONTH:09"}, "lang": "en"}
+{"id": "en-e432496ea8", "text": "urgent: leading belts style in march?", "intent": "top_sellers", "slots": {"product_group": "BELT", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-d64bae564f", "text": "Please pyjamas GMROI?", "intent": "margin", "slots": {"product_group": "PYJAMAS"}, "lang": "en"}
+{"id": "en-19a063dc2e", "text": "quick one: girls' stock left after fall returns today", "intent": "returns", "slots": {"gender": "GIRLS", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-cdadb1f9f8", "text": "Q: how many shirts do we have left?", "intent": "stock", "slots": {"product_group": "SHIRT"}, "lang": "en"}
+{"id": "en-20735679ae", "text": "hi, across all channels budget variance in the winter season pls", "intent": "budget_otb", "slots": {"period": "SEASON:WINTER", "channel": "ALL"}, "lang": "en"}
+{"id": "en-5243d27581", "text": "Please has the bags ETA slipped?", "intent": "order_eta", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-2e0164b1f2", "text": "Can you check Covent Garden store best sellers week 38?", "intent": "top_sellers", "slots": {"period": "WEEK:38", "store": "COVENT GARDEN STORE"}, "lang": "en"}
+{"id": "en-124d86acbb", "text": "womenswear caps plan vs actual pls", "intent": "budget_otb", "slots": {"gender": "WOMEN", "product_group": "HAT"}, "lang": "en"}
+{"id": "en-655167f01b", "text": "Children's shorts gross profit YTD please", "intent": "margin", "slots": {"gender": "KIDS", "product_group": "SHORTS", "period": "YTD"}, "lang": "en"}
+{"id": "en-3ce42b7b52", "text": "please coat woc", "intent": "cover", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-c93e2e0043", "text": "Hi, womenswear last month budget achievement please", "intent": "budget_otb", "slots": {"gender": "WOMEN", "period": "LAST_MONTH"}, "lang": "en"}
+{"id": "en-738adfa4e5", "text": "knitwear W46 against target percentage change?", "intent": "growth", "slots": {"product_group": "KNITWEAR", "period": "WEEK:46", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-b4c361cc9c", "text": "Scarves SOH at 1323?", "intent": "stock", "slots": {"product_group": "SCARF", "store": "1323"}, "lang": "en"}
+{"id": "en-11dbdfcd93", "text": "Please average markdown in May", "intent": "price_discount", "slots": {"period": "MONTH:05"}, "lang": "en"}
+{"id": "en-febcdeabfc", "text": "Hey, girls' polos delivery status please", "intent": "shipment_status", "slots": {"gender": "GIRLS", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-d4df112914", "text": "hey, boots soh at lisbon?", "intent": "stock", "slots": {"product_group": "BOOTS", "store": "LISBON"}, "lang": "en"}
+{"id": "en-855b4c9369", "text": "Can you check shirts sales in concessions WTD", "intent": "sales", "slots": {"product_group": "SHIRT", "period": "THIS_WEEK", "channel": "CONCESSION"}, "lang": "en"}
+{"id": "en-34a6f81561", "text": "1167 ladies' dresses sell through to date", "intent": "sell_through", "slots": {"gender": "WOMEN", "product_group": "DRESS", "store": "1167"}, "lang": "en"}
+{"id": "en-60437d5d0d", "text": "Copenhagen high street women's broken size list thanks", "intent": "broken_sizes", "slots": {"gender": "WOMEN", "store": "COPENHAGEN HIGH STREET"}, "lang": "en"}
+{"id": "en-d877fb5363", "text": "Baby cardigans Izmir high street shipment status pls", "intent": "shipment_status", "slots": {"gender": "BABY", "product_group": "CARDIGAN", "store": "IZMIR HIGH STREET"}, "lang": "en"}
+{"id": "en-f2631b8c8b", "text": "Can you check across all channels budget variance in July asap", "intent": "budget_otb", "slots": {"period": "MONTH:07", "channel": "ALL"}, "lang": "en"}
+{"id": "en-778cc4cf1e", "text": "Hi, has the tees ETA slipped?", "intent": "order_eta", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-17cf7fb75b", "text": "Hey, stores overstocked on children's cardigans?", "intent": "transfer", "slots": {"gender": "KIDS", "product_group": "CARDIGAN"}, "lang": "en"}
+{"id": "en-fbff776994", "text": "Hi, Riverside branch rank in jeans sales please", "intent": "store_ranking", "slots": {"product_group": "JEANS", "store": "RIVERSIDE BRANCH"}, "lang": "en"}
+{"id": "en-e5e153fc1c", "text": "women's profitability in August?", "intent": "margin", "slots": {"gender": "WOMEN", "period": "MONTH:08"}, "lang": "en"}
+{"id": "en-0523404b05", "text": "Hey, menswear sales in gross profit YTD pls", "intent": "sales", "slots": {"gender": "MEN", "period": "YTD", "measure": "MARGIN"}, "lang": "en"}
+{"id": "en-c60f83a47d", "text": "Hi, menswear tees plan vs actual?", "intent": "budget_otb", "slots": {"gender": "MEN", "product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-19707e0b17", "text": "hey, ladies' jumpers 1276 shipment status?", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "SWEATER", "store": "1276"}, "lang": "en"}
+{"id": "en-9f6926acac", "text": "urgent: boyswear returns units in week 45 asap", "intent": "returns", "slots": {"gender": "BOYS", "period": "WEEK:45"}, "lang": "en"}
+{"id": "en-6ecba546cb", "text": "Hi, 1854 boyswear capacity asap", "intent": "capacity", "slots": {"gender": "BOYS", "store": "1854"}, "lang": "en"}
+{"id": "en-a1e5d13f88", "text": "Q: all-department returns units in September please", "intent": "returns", "slots": {"gender": "ALL", "period": "MONTH:09"}, "lang": "en"}
+{"id": "en-2ddb825a8f", "text": "can you check stores overstocked on girls' luggage please", "intent": "transfer", "slots": {"gender": "GIRLS", "product_group": "LUGGAGE"}, "lang": "en"}
+{"id": "en-0a853894c3", "text": "fastest growing stores vs plan in december?", "intent": "store_ranking", "slots": {"period": "MONTH:12", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-3b0b70295a", "text": "Urgent: tees WOC", "intent": "cover", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-6478f34f62", "text": "Urgent: leading blouses style this season thanks", "intent": "top_sellers", "slots": {"product_group": "BLOUSE", "period": "THIS_SEASON"}, "lang": "en"}
+{"id": "en-7169c4314d", "text": "Underwear week 42 versus last year percentage change", "intent": "growth", "slots": {"product_group": "UNDERWEAR", "period": "WEEK:42", "comparison": "LY"}, "lang": "en"}
+{"id": "en-9bb4104b91", "text": "hi, what was sent to dublin mall std asap", "intent": "shipment_status", "slots": {"period": "SEASON_TO_DATE", "store": "DUBLIN MALL"}, "lang": "en"}
+{"id": "en-f33949de77", "text": "Can you check average markdown year to date asap", "intent": "price_discount", "slots": {"period": "YTD"}, "lang": "en"}
+{"id": "en-79c68fd26a", "text": "q: menswear gilets forward cover", "intent": "cover", "slots": {"gender": "MEN", "product_group": "VEST"}, "lang": "en"}
+{"id": "en-7b5cb27da2", "text": "hey, la defense branch all-department stock units pls", "intent": "stock", "slots": {"gender": "ALL", "store": "LA DEFENSE BRANCH"}, "lang": "en"}
+{"id": "en-a10f38214b", "text": "Q: scarves price points?", "intent": "price_discount", "slots": {"product_group": "SCARF"}, "lang": "en"}
+{"id": "en-c9fc81e1c9", "text": "harbour branch kidswear capacity", "intent": "capacity", "slots": {"gender": "KIDS", "store": "HARBOUR BRANCH"}, "lang": "en"}
+{"id": "en-a64b01bdc6", "text": "kids' store ranking w46?", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-13da8fe2fc", "text": "Hey, girlswear accessories weeks of cover today", "intent": "cover", "slots": {"gender": "GIRLS", "product_group": "ACCESSORIES"}, "lang": "en"}
+{"id": "en-01348686d3", "text": "Hey, how many chinos do we have left?", "intent": "stock", "slots": {"product_group": "CHINO"}, "lang": "en"}
+{"id": "en-879a0cd4e0", "text": "bags SOH at Izmir", "intent": "stock", "slots": {"product_group": "BAG", "store": "IZMIR"}, "lang": "en"}
+{"id": "en-60ce2b2c0f", "text": "all-department bags gross profit this summer season?", "intent": "margin", "slots": {"gender": "ALL", "product_group": "BAG", "period": "SEASON:SUMMER"}, "lang": "en"}
+{"id": "en-0765821e74", "text": "Urgent: Brussels rank in scarves sales", "intent": "store_ranking", "slots": {"product_group": "SCARF", "store": "BRUSSELS"}, "lang": "en"}
+{"id": "en-0ea7fb289f", "text": "can you check average markdown in august", "intent": "price_discount", "slots": {"period": "MONTH:08"}, "lang": "en"}
+{"id": "en-4669b90e82", "text": "children's underwear delivery status thanks", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "UNDERWEAR"}, "lang": "en"}
+{"id": "en-af5af3385a", "text": "Urgent: how many bags do we have left", "intent": "stock", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-6dbcc40cf4", "text": "total in March budget achievement please", "intent": "budget_otb", "slots": {"gender": "ALL", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-3b5973e7a5", "text": "give me in April womenswear handbags sales asap", "intent": "sales", "slots": {"gender": "WOMEN", "product_group": "BAG", "period": "MONTH:04"}, "lang": "en"}
+{"id": "en-8b99829a83", "text": "how is kadikoy branch doing vs plan in may?", "intent": "growth", "slots": {"period": "MONTH:05", "comparison": "PLAN", "store": "KADIKOY BRANCH"}, "lang": "en"}
+{"id": "en-05cb558bb3", "text": "menswear outerwear gross profit in February pls", "intent": "margin", "slots": {"gender": "MEN", "product_group": "OUTERWEAR", "period": "MONTH:02"}, "lang": "en"}
+{"id": "en-77c6d03ff9", "text": "Quick one: how many coat do we have left", "intent": "stock", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-d2a033ad12", "text": "hi, what was sent to warsaw high street in january please", "intent": "shipment_status", "slots": {"period": "MONTH:01", "store": "WARSAW HIGH STREET"}, "lang": "en"}
+{"id": "en-0ed6882983", "text": "in full-price stores growth rate in October vs LY thanks", "intent": "growth", "slots": {"period": "MONTH:10", "channel": "FULL_PRICE_STORES", "comparison": "LY"}, "lang": "en"}
+{"id": "en-2589b4c444", "text": "hey, boyswear wallets plan vs actual please", "intent": "budget_otb", "slots": {"gender": "BOYS", "product_group": "WALLET"}, "lang": "en"}
+{"id": "en-a27af3c0f1", "text": "Hey, coats GMROI?", "intent": "margin", "slots": {"product_group": "COAT"}, "lang": "en"}
+{"id": "en-980ba16614", "text": "Hi, menswear basic tees Airport branch shipment status", "intent": "shipment_status", "slots": {"gender": "MEN", "product_group": "BASIC_TSHIRT", "store": "AIRPORT BRANCH"}, "lang": "en"}
+{"id": "en-d5950f1c74", "text": "Hey, stores overstocked on boys' cardigans?", "intent": "transfer", "slots": {"gender": "BOYS", "product_group": "CARDIGAN"}, "lang": "en"}
+{"id": "en-d532f30333", "text": "Quick one: which stores are missing boys' jackets sizes?", "intent": "broken_sizes", "slots": {"gender": "BOYS", "product_group": "JACKET"}, "lang": "en"}
+{"id": "en-22adff38e1", "text": "Hi, accessories sales outlet last week asap", "intent": "sales", "slots": {"product_group": "ACCESSORIES", "period": "LAST_WEEK", "channel": "OUTLET"}, "lang": "en"}
+{"id": "en-59e7785cb0", "text": "Can you check where should Kings Road branch send its sweatshirts", "intent": "transfer", "slots": {"product_group": "SWEATSHIRT", "store": "KINGS ROAD BRANCH"}, "lang": "en"}
+{"id": "en-2b1fc24924", "text": "average markdown in june please", "intent": "price_discount", "slots": {"period": "MONTH:06"}, "lang": "en"}
+{"id": "en-afad54443e", "text": "Urgent: scarves WOC", "intent": "cover", "slots": {"product_group": "SCARF"}, "lang": "en"}
+{"id": "en-e8e993a8bb", "text": "Q: pants sales in concessions in December", "intent": "sales", "slots": {"product_group": "TROUSERS", "period": "MONTH:12", "channel": "CONCESSION"}, "lang": "en"}
+{"id": "en-b5875ef866", "text": "has the handbags ETA slipped?", "intent": "order_eta", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-d8b2c39bb5", "text": "kids' store ranking week to date", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-db36364335", "text": "kids' socks delivery status", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "SOCKS"}, "lang": "en"}
+{"id": "en-67edab5a42", "text": "Quick one: give me today women's polo shirts sales", "intent": "sales", "slots": {"gender": "WOMEN", "product_group": "POLO", "period": "TODAY"}, "lang": "en"}
+{"id": "en-f9c4e76555", "text": "boys' store ranking in June", "intent": "store_ranking", "slots": {"gender": "BOYS", "period": "MONTH:06"}, "lang": "en"}
+{"id": "en-ae8444d4db", "text": "Please womenswear store ranking this week?", "intent": "store_ranking", "slots": {"gender": "WOMEN", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-700f0f0d00", "text": "Hey, tracksuits price points", "intent": "price_discount", "slots": {"product_group": "TRACKSUIT"}, "lang": "en"}
+{"id": "en-3248427a29", "text": "women's trainers Covent Garden branch shipment status", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "SNEAKERS", "store": "COVENT GARDEN BRANCH"}, "lang": "en"}
+{"id": "en-61929bbee8", "text": "Please where should Warsaw high street send its tracksuits today", "intent": "transfer", "slots": {"product_group": "TRACKSUIT", "store": "WARSAW HIGH STREET"}, "lang": "en"}
+{"id": "en-b11ce3ef72", "text": "quick one: kings road all-department slippers sell through to date today", "intent": "sell_through", "slots": {"gender": "ALL", "product_group": "SLIPPERS", "store": "KINGS ROAD"}, "lang": "en"}
+{"id": "en-cb7ca06570", "text": "Q: leading swimwear style in August pls", "intent": "top_sellers", "slots": {"product_group": "SWIMWEAR", "period": "MONTH:08"}, "lang": "en"}
+{"id": "en-023c25741e", "text": "girls' in May budget achievement", "intent": "budget_otb", "slots": {"gender": "GIRLS", "period": "MONTH:05"}, "lang": "en"}
+{"id": "en-1297f4a92b", "text": "quick one: give me wk40 total trousers sales thanks", "intent": "sales", "slots": {"gender": "ALL", "product_group": "TROUSERS", "period": "WEEK:40"}, "lang": "en"}
+{"id": "en-6840d11b20", "text": "Please fastest growing stores against target W46", "intent": "store_ranking", "slots": {"period": "WEEK:46", "comparison": "PLAN"}, "lang": "en"}
+{"id": "en-71395fde2c", "text": "kidswear cardigans weeks of cover", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "CARDIGAN"}, "lang": "en"}
+{"id": "en-83b25b6c60", "text": "Urgent: on e-commerce growth rate in May against budget", "intent": "growth", "slots": {"period": "MONTH:05", "channel": "ECOMMERCE", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-115ce4948c", "text": "q: covent garden branch girls' skirts sell through to date pls", "intent": "sell_through", "slots": {"gender": "GIRLS", "product_group": "SKIRT", "store": "COVENT GARDEN BRANCH"}, "lang": "en"}
+{"id": "en-6f6adb2b3c", "text": "Vienna mall rank in fragrance sales", "intent": "store_ranking", "slots": {"product_group": "FRAGRANCE", "store": "VIENNA MALL"}, "lang": "en"}
+{"id": "en-fc28ce5170", "text": "men's polo shirts forward cover", "intent": "cover", "slots": {"gender": "MEN", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-533545e486", "text": "hey, how many caps do we have left?", "intent": "stock", "slots": {"product_group": "HAT"}, "lang": "en"}
+{"id": "en-db1c3ddad7", "text": "Can you check sneakers sales across all channels week 42 asap", "intent": "sales", "slots": {"product_group": "SNEAKERS", "period": "WEEK:42", "channel": "ALL"}, "lang": "en"}
+{"id": "en-f39f98d549", "text": "Quick one: women's overcoats forward cover", "intent": "cover", "slots": {"gender": "WOMEN", "product_group": "OVERCOAT"}, "lang": "en"}
+{"id": "en-edfa870591", "text": "Q: how many units can Dublin mall hold in boys'?", "intent": "capacity", "slots": {"gender": "BOYS", "store": "DUBLIN MALL"}, "lang": "en"}
+{"id": "en-dbdf5c58fd", "text": "Urgent: all-department returns units in March today", "intent": "returns", "slots": {"gender": "ALL", "period": "MONTH:03"}, "lang": "en"}
+{"id": "en-7a0834ec57", "text": "Please leading chinos style this season asap", "intent": "top_sellers", "slots": {"product_group": "CHINO", "period": "THIS_SEASON"}, "lang": "en"}
+{"id": "en-513ce7e37d", "text": "Quick one: give me WTD baby blouses sales thanks", "intent": "sales", "slots": {"gender": "BABY", "product_group": "BLOUSE", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-6cc58af78e", "text": "in concessions growth rate in May vs last week thanks", "intent": "growth", "slots": {"period": "MONTH:05", "channel": "CONCESSION", "comparison": "LAST_WEEK"}, "lang": "en"}
+{"id": "en-ed7e128665", "text": "boyswear last two weeks budget achievement", "intent": "budget_otb", "slots": {"gender": "BOYS", "period": "LAST_2_WEEKS"}, "lang": "en"}
+{"id": "en-3921aeea20", "text": "milan flagship best sellers this month thanks", "intent": "top_sellers", "slots": {"period": "THIS_MONTH", "store": "MILAN FLAGSHIP"}, "lang": "en"}
+{"id": "en-d2120be10e", "text": "Urgent: fastest growing stores vs budget week 38?", "intent": "store_ranking", "slots": {"period": "WEEK:38", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-1866916bfb", "text": "what was sent to Izmir outlet last week pls", "intent": "shipment_status", "slots": {"period": "LAST_WEEK", "store": "IZMIR OUTLET"}, "lang": "en"}
+{"id": "en-aa93e7bb8e", "text": "Q: stores overstocked on mens underwear today", "intent": "transfer", "slots": {"gender": "MEN", "product_group": "UNDERWEAR"}, "lang": "en"}
+{"id": "en-71a8246608", "text": "tees sales in stores last quarter?", "intent": "sales", "slots": {"product_group": "TSHIRT", "period": "LAST_QUARTER", "channel": "STORES"}, "lang": "en"}
+{"id": "en-28a74b18fc", "text": "Please kids' blouses weeks of cover?", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "BLOUSE"}, "lang": "en"}
+{"id": "en-b8b6ab5b95", "text": "kidswear tees delivery status pls", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-404950fcf5", "text": "Quick one: men's store ranking in September", "intent": "store_ranking", "slots": {"gender": "MEN", "period": "MONTH:09"}, "lang": "en"}
+{"id": "en-c074e05954", "text": "how many units can Porto hold in children's?", "intent": "capacity", "slots": {"gender": "KIDS", "store": "PORTO"}, "lang": "en"}
+{"id": "en-77a9386d5c", "text": "average markdown in the winter season today", "intent": "price_discount", "slots": {"period": "SEASON:WINTER"}, "lang": "en"}
+{"id": "en-21a745e994", "text": "Q: handbags week 38 vs budget percentage change today", "intent": "growth", "slots": {"product_group": "BAG", "period": "WEEK:38", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-e0827723ca", "text": "boyswear tunics forward cover thanks", "intent": "cover", "slots": {"gender": "BOYS", "product_group": "TUNIC"}, "lang": "en"}
+{"id": "en-db1ca52763", "text": "Q: womenswear intake in October", "intent": "order_eta", "slots": {"gender": "WOMEN", "period": "MONTH:10"}, "lang": "en"}
+{"id": "en-e6e9121147", "text": "Quick one: worst 10 boyswear products last 7 days asap", "intent": "worst_sellers", "slots": {"gender": "BOYS", "period": "LAST_7_DAYS", "n": 10}, "lang": "en"}
+{"id": "en-93615dabac", "text": "Urgent: kids' store ranking in November thanks", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "MONTH:11"}, "lang": "en"}
+{"id": "en-dd08d4e0cc", "text": "urgent: womenswear pyjamas la defense store shipment status?", "intent": "shipment_status", "slots": {"gender": "WOMEN", "product_group": "PYJAMAS", "store": "LA DEFENSE STORE"}, "lang": "en"}
+{"id": "en-c94f502e07", "text": "Can you check overcoats WOC", "intent": "cover", "slots": {"product_group": "OVERCOAT"}, "lang": "en"}
+{"id": "en-f5f09d8fe9", "text": "Hey, Oxford Street boyswear tees sell through to date", "intent": "sell_through", "slots": {"gender": "BOYS", "product_group": "TSHIRT", "store": "OXFORD STREET"}, "lang": "en"}
+{"id": "en-cc03241fb7", "text": "hi, all-department basic tees forward cover thanks", "intent": "cover", "slots": {"gender": "ALL", "product_group": "BASIC_TSHIRT"}, "lang": "en"}
+{"id": "en-619ed52ebc", "text": "Q: outlet growth rate STD versus last year", "intent": "growth", "slots": {"period": "SEASON_TO_DATE", "channel": "OUTLET", "comparison": "LY"}, "lang": "en"}
+{"id": "en-d93fc32dc0", "text": "Urgent: baby in the winter season budget achievement?", "intent": "budget_otb", "slots": {"gender": "BABY", "period": "SEASON:WINTER"}, "lang": "en"}
+{"id": "en-fa6f41f128", "text": "Quick one: Warsaw flagship girlswear broken size list?", "intent": "broken_sizes", "slots": {"gender": "GIRLS", "store": "WARSAW FLAGSHIP"}, "lang": "en"}
+{"id": "en-b2797acde7", "text": "men's wk40 budget achievement asap", "intent": "budget_otb", "slots": {"gender": "MEN", "period": "WEEK:40"}, "lang": "en"}
+{"id": "en-97845d05bd", "text": "what was sent to Milan in the winter season?", "intent": "shipment_status", "slots": {"period": "SEASON:WINTER", "store": "MILAN"}, "lang": "en"}
+{"id": "en-d582619886", "text": "Please Hamburg mall best sellers in May thanks", "intent": "top_sellers", "slots": {"period": "MONTH:05", "store": "HAMBURG MALL"}, "lang": "en"}
+{"id": "en-1020316921", "text": "girlswear returns units week 42", "intent": "returns", "slots": {"gender": "GIRLS", "period": "WEEK:42"}, "lang": "en"}
+{"id": "en-6123c5c0e6", "text": "Hey, children's boxers weeks of cover", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "BOXERS"}, "lang": "en"}
+{"id": "en-71967b8fca", "text": "Hey, pyjamas SOH at Lisbon flagship pls", "intent": "stock", "slots": {"product_group": "PYJAMAS", "store": "LISBON FLAGSHIP"}, "lang": "en"}
+{"id": "en-70659a2ba6", "text": "please madrid outlet children's polos sell through to date?", "intent": "sell_through", "slots": {"gender": "KIDS", "product_group": "POLO", "store": "MADRID OUTLET"}, "lang": "en"}
+{"id": "en-f99194640d", "text": "how is Bluewater branch doing vs budget last quarter?", "intent": "growth", "slots": {"period": "LAST_QUARTER", "comparison": "BUDGET", "store": "BLUEWATER BRANCH"}, "lang": "en"}
+{"id": "en-155ee4d12e", "text": "urgent: worst 5 kidswear products last quarter pls", "intent": "worst_sellers", "slots": {"gender": "KIDS", "period": "LAST_QUARTER", "n": 5}, "lang": "en"}
+{"id": "en-453f93fdd5", "text": "Hey, leading swimwear style L4W", "intent": "top_sellers", "slots": {"product_group": "SWIMWEAR", "period": "LAST_4_WEEKS"}, "lang": "en"}
+{"id": "en-bbadf913c3", "text": "Hi, any supplier delays on t-shirts thanks", "intent": "order_eta", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-511811f503", "text": "handbags gmroi asap", "intent": "margin", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-9cc8d3ad18", "text": "Oxford Street branch worst sellers in the winter season?", "intent": "worst_sellers", "slots": {"period": "SEASON:WINTER", "store": "OXFORD STREET BRANCH"}, "lang": "en"}
+{"id": "en-5e8c8a04f3", "text": "can you check children's intake last month pls", "intent": "order_eta", "slots": {"gender": "KIDS", "period": "LAST_MONTH"}, "lang": "en"}
+{"id": "en-7553f94972", "text": "how is Nisantasi doing vs budget week to date?", "intent": "growth", "slots": {"period": "THIS_WEEK", "comparison": "BUDGET", "store": "NISANTASI"}, "lang": "en"}
+{"id": "en-21c929505f", "text": "which stores are missing girlswear tracksuits sizes", "intent": "broken_sizes", "slots": {"gender": "GIRLS", "product_group": "TRACKSUIT"}, "lang": "en"}
+{"id": "en-51b1b51185", "text": "children's trousers forward cover", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-d9bc276018", "text": "Quick one: average markdown last quarter?", "intent": "price_discount", "slots": {"period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-f251d7eaac", "text": "Quick one: Lyon mall worst sellers last 7 days pls", "intent": "worst_sellers", "slots": {"period": "LAST_7_DAYS", "store": "LYON MALL"}, "lang": "en"}
+{"id": "en-496f91ddbd", "text": "quick one: izmir mall women's capacity today", "intent": "capacity", "slots": {"gender": "WOMEN", "store": "IZMIR MALL"}, "lang": "en"}
+{"id": "en-73a38f6370", "text": "jackets GMROI?", "intent": "margin", "slots": {"product_group": "JACKET"}, "lang": "en"}
+{"id": "en-c07a842bbe", "text": "Stores overstocked on kidswear luggage thanks", "intent": "transfer", "slots": {"gender": "KIDS", "product_group": "LUGGAGE"}, "lang": "en"}
+{"id": "en-070b354512", "text": "Old Town branch worst sellers in week 45 thanks", "intent": "worst_sellers", "slots": {"period": "WEEK:45", "store": "OLD TOWN BRANCH"}, "lang": "en"}
+{"id": "en-95b8182434", "text": "Please children's polo shirts 1733 shipment status asap", "intent": "shipment_status", "slots": {"gender": "KIDS", "product_group": "POLO", "store": "1733"}, "lang": "en"}
+{"id": "en-0c1923ec04", "text": "Can you check children's underwear forward cover?", "intent": "cover", "slots": {"gender": "KIDS", "product_group": "UNDERWEAR"}, "lang": "en"}
+{"id": "en-8d43b7eb3b", "text": "Can you check baby sales in units last two weeks?", "intent": "sales", "slots": {"gender": "BABY", "period": "LAST_2_WEEKS", "measure": "UNITS"}, "lang": "en"}
+{"id": "en-09ac27f4a2", "text": "Hey, stores overstocked on menswear polo shirts thanks", "intent": "transfer", "slots": {"gender": "MEN", "product_group": "POLO"}, "lang": "en"}
+{"id": "en-e752dfe74d", "text": "Urgent: womenswear knitwear gross profit season to date", "intent": "margin", "slots": {"gender": "WOMEN", "product_group": "KNITWEAR", "period": "SEASON_TO_DATE"}, "lang": "en"}
+{"id": "en-f349f0df1c", "text": "Hamburg high street men's pyjamas sell through to date?", "intent": "sell_through", "slots": {"gender": "MEN", "product_group": "PYJAMAS", "store": "HAMBURG HIGH STREET"}, "lang": "en"}
+{"id": "en-8ea3d9aa92", "text": "Q: boys' this season budget achievement", "intent": "budget_otb", "slots": {"gender": "BOYS", "period": "THIS_SEASON"}, "lang": "en"}
+{"id": "en-582fa3950f", "text": "Q: Soho store rank in hats sales?", "intent": "store_ranking", "slots": {"product_group": "HAT", "store": "SOHO STORE"}, "lang": "en"}
+{"id": "en-a9e5fcb851", "text": "Hi, kidswear intake in February today", "intent": "order_eta", "slots": {"gender": "KIDS", "period": "MONTH:02"}, "lang": "en"}
+{"id": "en-e1a7b6a9b5", "text": "Quick one: Canary Wharf branch mens broken size list", "intent": "broken_sizes", "slots": {"gender": "MEN", "store": "CANARY WHARF BRANCH"}, "lang": "en"}
+{"id": "en-a269374476", "text": "Kadikoy best sellers in week 45", "intent": "top_sellers", "slots": {"period": "WEEK:45", "store": "KADIKOY"}, "lang": "en"}
+{"id": "en-afd3051f4e", "text": "can you check all-department sales in revenue in february thanks", "intent": "sales", "slots": {"gender": "ALL", "period": "MONTH:02", "measure": "REVENUE"}, "lang": "en"}
+{"id": "en-e7de6795c7", "text": "Athens mall boys' stock units pls", "intent": "stock", "slots": {"gender": "BOYS", "store": "ATHENS MALL"}, "lang": "en"}
+{"id": "en-54b6b833e0", "text": "Hi, Warsaw flagship all-department broken size list?", "intent": "broken_sizes", "slots": {"gender": "ALL", "store": "WARSAW FLAGSHIP"}, "lang": "en"}
+{"id": "en-692e474b86", "text": "average markdown in June pls", "intent": "price_discount", "slots": {"period": "MONTH:06"}, "lang": "en"}
+{"id": "en-814bf4a4d6", "text": "Women's stock left after new season returns please", "intent": "returns", "slots": {"gender": "WOMEN", "season": "NEW"}, "lang": "en"}
+{"id": "en-0c4fe9ec7e", "text": "Q: fastest growing stores vs LY week 38 pls", "intent": "store_ranking", "slots": {"period": "WEEK:38", "comparison": "LY"}, "lang": "en"}
+{"id": "en-0a0af087ed", "text": "urgent: leeds outlet rank in bags sales asap", "intent": "store_ranking", "slots": {"product_group": "BAG", "store": "LEEDS OUTLET"}, "lang": "en"}
+{"id": "en-82ccff0f2e", "text": "how many units can hamburg hold in menswear?", "intent": "capacity", "slots": {"gender": "MEN", "store": "HAMBURG"}, "lang": "en"}
+{"id": "en-282d867a0f", "text": "Quick one: girls' outerwear Dublin mall shipment status?", "intent": "shipment_status", "slots": {"gender": "GIRLS", "product_group": "OUTERWEAR", "store": "DUBLIN MALL"}, "lang": "en"}
+{"id": "en-7fc6f2dbb9", "text": "Please boyswear returns units W46 thanks", "intent": "returns", "slots": {"gender": "BOYS", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-c659906949", "text": "Urgent: Airport store worst sellers week to date", "intent": "worst_sellers", "slots": {"period": "THIS_WEEK", "store": "AIRPORT STORE"}, "lang": "en"}
+{"id": "en-c6f9717bee", "text": "ladies' intake this week today", "intent": "order_eta", "slots": {"gender": "WOMEN", "period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-4f41ec25dc", "text": "Please which stores are missing ladies' hoodies sizes?", "intent": "broken_sizes", "slots": {"gender": "WOMEN", "product_group": "SWEATSHIRT"}, "lang": "en"}
+{"id": "en-b906b8b26c", "text": "Munich mall rank in boots sales", "intent": "store_ranking", "slots": {"product_group": "BOOTS", "store": "MUNICH MALL"}, "lang": "en"}
+{"id": "en-9beffda474", "text": "any supplier delays on underwear pls", "intent": "order_eta", "slots": {"product_group": "UNDERWEAR"}, "lang": "en"}
+{"id": "en-9eee1775b0", "text": "Q: average markdown over the weekend", "intent": "price_discount", "slots": {"period": "WEEKEND"}, "lang": "en"}
+{"id": "en-85534a3e95", "text": "Can you check all-department scarves delivery status thanks", "intent": "shipment_status", "slots": {"gender": "ALL", "product_group": "SCARF"}, "lang": "en"}
+{"id": "en-0f23559804", "text": "Hey, Kadikoy rank in cardigans sales asap", "intent": "store_ranking", "slots": {"product_group": "CARDIGAN", "store": "KADIKOY"}, "lang": "en"}
+{"id": "en-7b150198c7", "text": "How many chinos do we have left", "intent": "stock", "slots": {"product_group": "CHINO"}, "lang": "en"}
+{"id": "en-e5b4ca617f", "text": "Hi, how many hats do we have left", "intent": "stock", "slots": {"product_group": "HAT"}, "lang": "en"}
+{"id": "en-6111feed74", "text": "Please scarves WOC pls", "intent": "cover", "slots": {"product_group": "SCARF"}, "lang": "en"}
+{"id": "en-8012b27e93", "text": "Can you check Airport store best sellers last 4 weeks pls", "intent": "top_sellers", "slots": {"period": "LAST_4_WEEKS", "store": "AIRPORT STORE"}, "lang": "en"}
+{"id": "en-38875d59cc", "text": "Can you check 1369 girls' broken size list pls", "intent": "broken_sizes", "slots": {"gender": "GIRLS", "store": "1369"}, "lang": "en"}
+{"id": "en-b606b8ef72", "text": "quick one: how is old town store doing vs ly last month?", "intent": "growth", "slots": {"period": "LAST_MONTH", "comparison": "LY", "store": "OLD TOWN STORE"}, "lang": "en"}
+{"id": "en-d51ed8ea4a", "text": "Hey, boys' store ranking W46 asap", "intent": "store_ranking", "slots": {"gender": "BOYS", "period": "WEEK:46"}, "lang": "en"}
+{"id": "en-f112b9e0ce", "text": "Urgent: has the shirts ETA slipped", "intent": "order_eta", "slots": {"product_group": "SHIRT"}, "lang": "en"}
+{"id": "en-d494d2a086", "text": "what was sent to 1072 in August?", "intent": "shipment_status", "slots": {"period": "MONTH:08", "store": "1072"}, "lang": "en"}
+{"id": "en-eda2724087", "text": "Hey, chinos sales on marketplaces year to date?", "intent": "sales", "slots": {"product_group": "CHINO", "period": "YTD", "channel": "MARKETPLACE"}, "lang": "en"}
+{"id": "en-b12ec74732", "text": "Quick one: 1855 all-department beanies sell through to date?", "intent": "sell_through", "slots": {"gender": "ALL", "product_group": "BEANIE", "store": "1855"}, "lang": "en"}
+{"id": "en-cea19b7472", "text": "hi, handbags woc today", "intent": "cover", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-789a527405", "text": "jeans GMROI thanks", "intent": "margin", "slots": {"product_group": "JEANS"}, "lang": "en"}
+{"id": "en-ef32803570", "text": "can you check girls' stock left after fall returns?", "intent": "returns", "slots": {"gender": "GIRLS", "season": "AUTUMN"}, "lang": "en"}
+{"id": "en-231108f60e", "text": "please in outlets budget variance last month today", "intent": "budget_otb", "slots": {"period": "LAST_MONTH", "channel": "OUTLET"}, "lang": "en"}
+{"id": "en-074618f210", "text": "boys' returns units in july please", "intent": "returns", "slots": {"gender": "BOYS", "period": "MONTH:07"}, "lang": "en"}
+{"id": "en-2b0bd4134c", "text": "girlswear vests plan vs actual", "intent": "budget_otb", "slots": {"gender": "GIRLS", "product_group": "VEST"}, "lang": "en"}
+{"id": "en-2cf7b54ce3", "text": "Can you check baby jackets forward cover?", "intent": "cover", "slots": {"gender": "BABY", "product_group": "JACKET"}, "lang": "en"}
+{"id": "en-572b397876", "text": "Quick one: how is City Centre branch doing vs last week last 7 days?", "intent": "growth", "slots": {"period": "LAST_7_DAYS", "comparison": "LAST_WEEK", "store": "CITY CENTRE BRANCH"}, "lang": "en"}
+{"id": "en-e1eca1666e", "text": "Quick one: has the blouses ETA slipped?", "intent": "order_eta", "slots": {"product_group": "BLOUSE"}, "lang": "en"}
+{"id": "en-9e89ee5685", "text": "trainers price points pls", "intent": "price_discount", "slots": {"product_group": "SNEAKERS"}, "lang": "en"}
+{"id": "en-d6d18e920d", "text": "1808 worst sellers in the winter season please", "intent": "worst_sellers", "slots": {"period": "SEASON:WINTER", "store": "1808"}, "lang": "en"}
+{"id": "en-3cc7d66c41", "text": "girls' store ranking last 4 weeks?", "intent": "store_ranking", "slots": {"gender": "GIRLS", "period": "LAST_4_WEEKS"}, "lang": "en"}
+{"id": "en-046705206f", "text": "Urgent: give me last 7 days menswear scarves sales pls", "intent": "sales", "slots": {"gender": "MEN", "product_group": "SCARF", "period": "LAST_7_DAYS"}, "lang": "en"}
+{"id": "en-10df1ecaa3", "text": "mens intake last week pls", "intent": "order_eta", "slots": {"gender": "MEN", "period": "LAST_WEEK"}, "lang": "en"}
+{"id": "en-5c96521ad8", "text": "In concessions growth rate today versus last year thanks", "intent": "growth", "slots": {"period": "TODAY", "channel": "CONCESSION", "comparison": "LY"}, "lang": "en"}
+{"id": "en-4110bedfab", "text": "has the tees eta slipped", "intent": "order_eta", "slots": {"product_group": "TSHIRT"}, "lang": "en"}
+{"id": "en-dd3ff07ebf", "text": "Urgent: boys' shorts gross profit in May", "intent": "margin", "slots": {"gender": "BOYS", "product_group": "SHORTS", "period": "MONTH:05"}, "lang": "en"}
+{"id": "en-eb7d2d4ac5", "text": "hey, shorts woc", "intent": "cover", "slots": {"product_group": "SHORTS"}, "lang": "en"}
+{"id": "en-6447c47bbb", "text": "girls' last quarter budget achievement", "intent": "budget_otb", "slots": {"gender": "GIRLS", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-4c1b20f247", "text": "girls' sweaters delivery status?", "intent": "shipment_status", "slots": {"gender": "GIRLS", "product_group": "SWEATER"}, "lang": "en"}
+{"id": "en-15ae6abb4b", "text": "Q: 1497 baby stock units pls", "intent": "stock", "slots": {"gender": "BABY", "store": "1497"}, "lang": "en"}
+{"id": "en-10fc27ac08", "text": "what was sent to Milan high street MTD today", "intent": "shipment_status", "slots": {"period": "THIS_MONTH", "store": "MILAN HIGH STREET"}, "lang": "en"}
+{"id": "en-6e16a05eb4", "text": "Hi, stores overstocked on girlswear outerwear?", "intent": "transfer", "slots": {"gender": "GIRLS", "product_group": "OUTERWEAR"}, "lang": "en"}
+{"id": "en-31ece35f0d", "text": "Pants GMROI?", "intent": "margin", "slots": {"product_group": "TROUSERS"}, "lang": "en"}
+{"id": "en-a9c9d39013", "text": "Hi, polos SOH at 1095 asap", "intent": "stock", "slots": {"product_group": "POLO", "store": "1095"}, "lang": "en"}
+{"id": "en-85059871e3", "text": "oxford street store menswear broken size list asap", "intent": "broken_sizes", "slots": {"gender": "MEN", "store": "OXFORD STREET STORE"}, "lang": "en"}
+{"id": "en-3447329036", "text": "where should Vienna send its wallets?", "intent": "transfer", "slots": {"product_group": "WALLET", "store": "VIENNA"}, "lang": "en"}
+{"id": "en-2d1658e2dd", "text": "hi, what was sent to westfield branch season to date", "intent": "shipment_status", "slots": {"period": "SEASON_TO_DATE", "store": "WESTFIELD BRANCH"}, "lang": "en"}
+{"id": "en-6bf796739b", "text": "average markdown wtd today", "intent": "price_discount", "slots": {"period": "THIS_WEEK"}, "lang": "en"}
+{"id": "en-7b719285b0", "text": "how many units can lisbon high street hold in boyswear?", "intent": "capacity", "slots": {"gender": "BOYS", "store": "LISBON HIGH STREET"}, "lang": "en"}
+{"id": "en-a3f379d805", "text": "which stores are missing baby luggage sizes", "intent": "broken_sizes", "slots": {"gender": "BABY", "product_group": "LUGGAGE"}, "lang": "en"}
+{"id": "en-8614639ed1", "text": "Please children's store ranking in November today", "intent": "store_ranking", "slots": {"gender": "KIDS", "period": "MONTH:11"}, "lang": "en"}
+{"id": "en-ee8095b77e", "text": "Please women's returns units last quarter?", "intent": "returns", "slots": {"gender": "WOMEN", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-be3e7c98e4", "text": "Can you check 1966 rank in sweaters sales pls", "intent": "store_ranking", "slots": {"product_group": "SWEATER", "store": "1966"}, "lang": "en"}
+{"id": "en-b253ad74cf", "text": "Q: stores overstocked on total scarves thanks", "intent": "transfer", "slots": {"gender": "ALL", "product_group": "SCARF"}, "lang": "en"}
+{"id": "en-bb186b1861", "text": "kidswear old season sell-through?", "intent": "sell_through", "slots": {"gender": "KIDS", "season": "OLD"}, "lang": "en"}
+{"id": "en-2278e21a03", "text": "has the shorts ETA slipped", "intent": "order_eta", "slots": {"product_group": "SHORTS"}, "lang": "en"}
+{"id": "en-0658e6936a", "text": "hi, ladies' intake week 42?", "intent": "order_eta", "slots": {"gender": "WOMEN", "period": "WEEK:42"}, "lang": "en"}
+{"id": "en-3c46fa93ed", "text": "all-department intake last quarter?", "intent": "order_eta", "slots": {"gender": "ALL", "period": "LAST_QUARTER"}, "lang": "en"}
+{"id": "en-73afd36ab3", "text": "hi, 1791 boys' stock units pls", "intent": "stock", "slots": {"gender": "BOYS", "store": "1791"}, "lang": "en"}
+{"id": "en-733a5f1a26", "text": "Quick one: total summer sell-through", "intent": "sell_through", "slots": {"gender": "ALL", "season": "SUMMER"}, "lang": "en"}
+{"id": "en-dd8d6cc750", "text": "Urgent: jumpers season to date against budget percentage change", "intent": "growth", "slots": {"product_group": "SWEATER", "period": "SEASON_TO_DATE", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-ba26e7076e", "text": "Q: give me wk40 children's beanies sales today", "intent": "sales", "slots": {"gender": "KIDS", "product_group": "BEANIE", "period": "WEEK:40"}, "lang": "en"}
+{"id": "en-63a3269dc0", "text": "any supplier delays on handbags?", "intent": "order_eta", "slots": {"product_group": "BAG"}, "lang": "en"}
+{"id": "en-7f5278c3c6", "text": "this summer season women's average selling price today", "intent": "price_discount", "slots": {"gender": "WOMEN", "period": "SEASON:SUMMER"}, "lang": "en"}
+{"id": "en-359d5f6162", "text": "Airport store mens broken size list asap", "intent": "broken_sizes", "slots": {"gender": "MEN", "store": "AIRPORT STORE"}, "lang": "en"}
+{"id": "en-3befad6a7e", "text": "which stores are missing all-department belts sizes?", "intent": "broken_sizes", "slots": {"gender": "ALL", "product_group": "BELT"}, "lang": "en"}
+{"id": "en-0572db8d19", "text": "Q: girls' old season sell-through asap", "intent": "sell_through", "slots": {"gender": "GIRLS", "season": "OLD"}, "lang": "en"}
+{"id": "en-c76edb0ecf", "text": "please fastest growing stores vs budget last week", "intent": "store_ranking", "slots": {"period": "LAST_WEEK", "comparison": "BUDGET"}, "lang": "en"}
+{"id": "en-865b4490ba", "text": "boys' sweaters delivery status", "intent": "shipment_status", "slots": {"gender": "BOYS", "product_group": "SWEATER"}, "lang": "en"}
+{"id": "en-615b3cbf77", "text": "Hey, stores overstocked on kids' scarves?", "intent": "transfer", "slots": {"gender": "KIDS", "product_group": "SCARF"}, "lang": "en"}
+{"id": "en-d6fc72d7bd", "text": "Hi, children's stock left after winter returns please", "intent": "returns", "slots": {"gender": "KIDS", "season": "WINTER"}, "lang": "en"}
+{"id": "en-5ad12241da", "text": "Hi, what's for lunch", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-67c5b64dcc", "text": "help?", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-20a69a4ec0", "text": "how is traffic?", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-668cd50eb6", "text": "Hi, my laptop won't start", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-7abceaf5b3", "text": "Where is the leave form", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-3571498d09", "text": "how is traffic", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-74212637a6", "text": "hey, have a good day", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-d1e232e6fd", "text": "nearest pharmacy!", "intent": "out_of_scope", "slots": {}, "lang": "en"}
+{"id": "en-413ec6074b", "text": "tell me a joke!", "intent": "out_of_scope", "slots": {}, "lang": "en"}

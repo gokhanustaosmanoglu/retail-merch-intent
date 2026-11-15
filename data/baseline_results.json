@@ -1,0 +1,10 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "method": "nearest centroid",
+  "accuracy": {
+    "tr->tr": 0.7264,
+    "tr->en": 0.4861,
+    "en->tr": 0.6339,
+    "en->en": 0.5896
+  }
+}

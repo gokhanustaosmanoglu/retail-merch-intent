@@ -2,119 +2,158 @@
 license: cc-by-4.0
 language:
   - tr
+  - en
+multilinguality:
+  - multilingual
 task_categories:
   - text-classification
   - token-classification
+task_ids:
+  - intent-classification
 tags:
-  - turkish
   - retail
   - merchandising
+  - fashion-retail
+  - inventory
   - intent-classification
   - slot-filling
+  - cross-lingual
   - synthetic
-pretty_name: "merch-tr-intent: Türkçe perakende merchandising soru → intent + slot"
+pretty_name: "merch-tr-intent: Retail Merchandising Intent & Slot Dataset (Turkish + English)"
 size_categories:
   - 1K<n<10K
+configs:
+  - config_name: tr
+    default: true
+    data_files:
+      - split: train
+        path: data/tr/train.jsonl
+      - split: test
+        path: data/tr/test.jsonl
+  - config_name: en
+    data_files:
+      - split: train
+        path: data/en/train.jsonl
+      - split: test
+        path: data/en/test.jsonl
 ---
 
 # merch-tr-intent
 
-Türkçe **perakende merchandising / planlama** sorularını yapılandırılmış sorguya çeviren asistanlar için
-intent sınıflandırma ve slot çıkarma veri seti. Örnek:
+**English** · [Türkçe](#türkçe)
+
+An intent-classification and slot-filling dataset for **retail merchandising and planning questions**, in **Turkish and English** with one shared schema.
 
 ```json
-{"text": "erkek triko geçen hafta kaç sattı", "intent": "satis",
- "slots": {"cinsiyet": "ERKEK", "urun_grubu": "TRIKO", "donem": "GECEN_HAFTA"}}
+{"text": "how many chinos did menswear sell last week", "intent": "sales",
+ "slots": {"gender": "MEN", "product_group": "CHINO", "period": "LAST_WEEK"}, "lang": "en"}
+{"text": "erkek chino geçen hafta kaç sattı", "intent": "sales",
+ "slots": {"gender": "MEN", "product_group": "CHINO", "period": "LAST_WEEK"}, "lang": "tr"}
 ```
 
-Amaç: "chino bu hafta kaç sattı, cover kaç?" gibi günlük soruları bir dil modeline SQL yazdırmadan, önceden
-tanımlı sorgu şablonlarına yönlendirmek. Model yalnız **hangi soru tipi** ve **hangi parametreler** kararını verir;
-rakamı veri kaynağı hesaplar. Bu tasarım yanlış sayı üretme riskini sıfırlar.
+## Why
 
-## İçerik
+Merchandisers, planners and allocators ask the same questions every day: *how much did it sell, how many weeks of cover, which stores have broken sizes, when does the order land*. Text-to-SQL models answer these by writing SQL and can return wrong numbers. This dataset supports a safer design: a model only decides **which question type** and **which parameters**; a pre-approved query template computes the number. Wrong-number risk drops to zero; the model's job is routing.
 
-| Bölme | Kayıt | Not |
-|---|---|---|
-| train | ~2.090 | 18 intent |
-| test | ~520 | **şablon düzeyinde ayrık**: test şablonları eğitimde hiç görülmez |
+As far as we found, no public intent dataset covers the retail-merchandising domain. General assistant datasets such as [MASSIVE](https://huggingface.co/datasets/AmazonScience/massive) (51 languages, alarm/music/weather) and retail text-to-SQL benchmarks exist, but nothing for merchandising intents.
 
-Her kayıt: `id`, `text`, `intent`, `slots` (sözlük; boş olabilir).
+## Contents (v0.2)
 
-### Intent'ler (18)
+| config | train | test | note |
+|---|---|---|---|
+| `tr` (default) | 2,091 | 519 | Turkish |
+| `en` | 2,108 | 502 | English |
 
-| intent | Soru tipi |
+Test splits are **template-held-out**: test templates never appear in training, so scores measure generalisation, not memorisation. The two languages share intents, slots and canonical slot values; templates were written independently per language (schema-parallel, not sentence-parallel).
+
+Each record: `id`, `text`, `intent`, `slots` (dict, may be empty), `lang`.
+
+### Intents (18)
+
+| intent | question type |
 |---|---|
-| satis | satış ciro/adet |
-| buyume | geçen yıl / plan / bütçeye göre değişim |
-| stok | eldeki stok (mağaza, depo) |
-| cover | kaç haftalık stok |
-| satis_orani | sell-through, eritme oranı |
-| en_cok_satan | best seller listesi |
-| en_az_satan | worst seller, satmayan |
-| kirik_beden | beden kırığı, beden tamamlama |
-| sevk_durumu | sevkiyat, yolda, rezerv |
-| transfer | mağazalar arası transfer önerisi |
-| indirim_fiyat | indirim oranı, fiyat, ASP, tam fiyat payı |
-| marj | brüt marj, çarpan, GMROI |
-| butce_otb | OTB, bütçe gerçekleşme, alım planı |
-| magaza_siralama | mağaza performans sıralaması |
-| siparis_termin | açık sipariş, termin, mal girişi |
-| iade | iade oranı, iade toplama |
-| kapasite | mağaza kapasitesi, doluluk, seçenek sayısı |
-| kapsam_disi | konu dışı / selamlaşma |
+| `sales` | sales revenue / units |
+| `growth` | change vs last year / plan / budget |
+| `stock` | stock on hand (store, DC) |
+| `cover` | weeks of cover |
+| `sell_through` | sell-through rate |
+| `top_sellers` | best sellers |
+| `worst_sellers` | worst sellers, dead stock |
+| `broken_sizes` | broken size curves, size replenishment |
+| `shipment_status` | dispatch, in-transit, reserved |
+| `transfer` | store-to-store transfer suggestions |
+| `price_discount` | discount rate, price, ASP, full-price share |
+| `margin` | gross margin, markup, GMROI |
+| `budget_otb` | open-to-buy, budget achievement, buy plan |
+| `store_ranking` | store performance ranking |
+| `order_eta` | open orders, ETA, intake |
+| `returns` | return rate, return collection |
+| `capacity` | store capacity, fill rate, option count |
+| `out_of_scope` | small talk / unrelated |
 
-### Slot'lar
+### Slots (9, canonical values in English for both languages)
 
-| slot | değerler |
+| slot | values |
 |---|---|
-| cinsiyet | ERKEK, KADIN, ERKEK_COCUK, KIZ_COCUK, COCUK, BEBEK, TUM |
-| urun_grubu | MONT, KABAN, TRIKO, KAZAK, GOMLEK, TISORT, POLO, CHINO, JEAN, PANTOLON, AYAKKABI, CORAP, CANTA, IC_GIYIM … (45 değer, `data/schema.json`) |
-| donem | BUGUN, BU_HAFTA, GECEN_HAFTA, SON_4_HAFTA, BU_AY, AY:01–12, HAFTA:nn, BU_SEZON, SEZON:KIS/YAZ, YTD … |
-| magaza | serbest metin (il/ilçe adı ya da 4 haneli kod); birden fazlaysa liste |
-| kanal | MAGAZA, ETICARET, OUTLET, TOPTAN, KURUMSAL, PAZARYERI, SEZON_MAGAZA, TUM |
-| olcu | CIRO, ADET, MARJ |
-| kiyas | GY, PLAN, BUTCE, GECEN_HAFTA |
-| n | tam sayı (top-N) |
-| sezon | KIS, YAZ, ILKBAHAR, SONBAHAR, YENI, ESKI |
+| `gender` | MEN, WOMEN, BOYS, GIRLS, KIDS, BABY, ALL |
+| `product_group` | COAT, OVERCOAT, OUTERWEAR, KNITWEAR, SWEATER, SHIRT, TSHIRT, POLO, CHINO, JEANS, TROUSERS, SHOES, SOCKS, BAG, UNDERWEAR … (41 values, see `data/schema.json`) |
+| `period` | TODAY, THIS_WEEK, LAST_WEEK, LAST_4_WEEKS, THIS_MONTH, MONTH:01–12, WEEK:nn, THIS_SEASON, SEASON:WINTER/SUMMER, SEASON_TO_DATE, YTD … |
+| `store` | free text (city / district or 4-digit code); list if more than one |
+| `channel` | STORES, ECOMMERCE, OUTLET, WHOLESALE, CONCESSION, MARKETPLACE, FULL_PRICE_STORES, ALL |
+| `measure` | REVENUE, UNITS, MARGIN |
+| `comparison` | LY, PLAN, BUDGET, LAST_WEEK |
+| `n` | integer (top-N) |
+| `season` | WINTER, SUMMER, SPRING, AUTUMN, NEW, OLD |
 
-## Nasıl üretildi
+## Baseline
 
-Tamamen **sentetik**: her intent için elle yazılmış 11–17 Türkçe şablon, genel perakende sözlüğünden slot
-doldurma (`uret.py`), yüzey çeşitlemesi (selamlama öneki, rica soneki, küçük/büyük harf). Mağaza adları Türkiye
-il/ilçe adları ya da rastgele 4 haneli kodlardır; **hiçbir şirkete ait veri, mağaza, ürün kodu ya da rakam içermez.**
+Frozen `intfloat/multilingual-e5-small` embeddings + nearest centroid, intent accuracy on the template-held-out test sets (`baseline.py`):
 
-Sınırlar (v0.1):
-- Şablon tabanlı olduğu için doğal konuşma çeşitliliği sınırlı; v0.2'de insan yazımı paraphrase eklenecek.
-- Tek intent / tek soru; birleşik sorular ("satış ve cover") yok.
-- Slot etiketleri kanonik değerdir, metin içi konum (span) verilmez.
+| train → test | accuracy |
+|---|---|
+| tr → tr | 0.726 |
+| en → en | 0.590 |
+| en → tr | 0.634 |
+| tr → en | 0.486 |
 
-## Taban çizgisi
+The hard pairs are deliberate: `broken_sizes` vs `transfer`, `transfer` vs `stock`, `order_eta` vs `shipment_status`, `top_sellers` vs `worst_sellers`. Separating them is the assistant's real job. A trained classifier or a small LLM fine-tune (LoRA) is the expected next step; cross-lingual transfer is an open question this dataset makes measurable.
 
-`baseline.py`: `ytu-ce-cosmos/turkish-e5-large` embedding + en yakın merkez (nearest centroid) ve kNN;
-sonuç dataset kartının altındaki tabloda (bkz. "Sonuçlar").
+## How it was made
 
-## Kullanım
+Fully **synthetic**: hand-written templates per intent and language, filled from a generic retail vocabulary (`uret.py`), with surface variation (greetings, polite suffixes, casing). Store names are city / district names or random 4-digit codes. **No company data, real store identifiers, product codes or sales figures.**
+
+Limitations (v0.2): template-based, so natural variety is limited; single-intent questions only (no "sales and cover" combos); slots are canonical values, not character spans; English and Turkish are not sentence-aligned.
+
+## Usage
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("gokhanustaosmanoglu/merch-tr-intent")
-print(ds["train"][0])
+tr = load_dataset("gokhanustaosmanoglu/merch-tr-intent", "tr")
+en = load_dataset("gokhanustaosmanoglu/merch-tr-intent", "en")
+print(en["train"][0])
 ```
 
-Kaynak kod ve üretici: https://github.com/gokhanustaosmanoglu/merch-tr-intent
+Source and generator: https://github.com/gokhanustaosmanoglu/merch-tr-intent
 
-## Lisans ve atıf
+## Changelog
 
-CC-BY-4.0. Atıf: `merch-tr-intent (2026), Türkçe perakende merchandising intent veri seti`.
+- **v0.2** (2026-11): English config added; intents, slot names and canonical values switched to English for both languages (breaking change from v0.1); `lang` field; cross-lingual baseline.
+- **v0.1** (2026-11): Turkish only, Turkish labels.
 
-## Sonuçlar
+## License and citation
 
-| yöntem | test doğruluk (intent) |
-|---|---|
-| nearest centroid, turkish-e5-large (eğitimsiz) | 0,766 |
-| kNN k=5, turkish-e5-large (eğitimsiz) | 0,576 |
+CC-BY-4.0. See `CITATION.cff`.
 
-Test şablonları eğitimde görülmediği için bu sayılar genellemeyi ölçer. Embedding'de slot kelimeleri (ürün, dönem)
-baskın olduğundan kNN düşük kalır; eğitimli bir sınıflandırıcı ya da küçük bir dil modeli ince ayarı (LoRA) beklenen
-sonraki adımdır. En çok karışan çiftler: kırık beden ↔ transfer, transfer ↔ stok, sipariş/termin ↔ sevk durumu.
-Zor örnekler kasıtlıdır: bu çiftleri ayırmak asistanın asıl işidir.
+---
+
+## Türkçe
+
+Perakende **merchandising / planlama** sorularını yapılandırılmış sorguya çeviren asistanlar için intent sınıflandırma ve slot çıkarma veri seti; **Türkçe ve İngilizce**, tek ortak şema.
+
+Amaç: "chino bu hafta kaç sattı, cover kaç?" gibi günlük soruları bir dil modeline SQL yazdırmadan, önceden onaylı sorgu şablonlarına yönlendirmek. Model yalnız **soru tipi** ve **parametreler** kararını verir; rakamı veri kaynağı hesaplar. Yanlış rakam riski sıfırlanır.
+
+- `tr` (varsayılan) ve `en` olmak üzere iki yapılandırma; her birinde ~2.100 eğitim, ~500 test kaydı.
+- Test bölmesi **şablon düzeyinde ayrık**: test şablonları eğitimde hiç görülmez.
+- Intent, slot adları ve kanonik değerler iki dilde de İngilizcedir (v0.2'de değişti); bu sayede Türkçe ve İngilizce aynı sorgu şablonlarına bağlanır.
+- Tamamen sentetik; hiçbir şirkete ait veri, mağaza, ürün kodu ya da rakam içermez.
+- Taban çizgisi yukarıdaki tabloda; Türkçe-Türkçe %72,6, İngilizceden Türkçeye aktarım %63,4.

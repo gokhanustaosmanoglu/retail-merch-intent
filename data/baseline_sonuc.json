@@ -1,6 +1,0 @@
-{
-  "model": "ytu-ce-cosmos/turkish-e5-large",
-  "nearest_centroid": 0.7658,
-  "knn5": 0.5758,
-  "test_n": 521
-}
