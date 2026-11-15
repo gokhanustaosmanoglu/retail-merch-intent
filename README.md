@@ -19,7 +19,7 @@ tags:
   - slot-filling
   - cross-lingual
   - synthetic
-pretty_name: "merch-tr-intent: Retail Merchandising Intent & Slot Dataset (Turkish + English)"
+pretty_name: "retail-merch-intent: Retail Merchandising Intent & Slot Dataset (Turkish + English)"
 size_categories:
   - 1K<n<10K
 configs:
@@ -38,7 +38,7 @@ configs:
         path: data/en/test.jsonl
 ---
 
-# merch-tr-intent
+# retail-merch-intent
 
 **English** · [Türkçe](#türkçe)
 
@@ -128,16 +128,16 @@ Limitations (v0.2): template-based, so natural variety is limited; single-intent
 
 ```python
 from datasets import load_dataset
-tr = load_dataset("gokhanustaosmanoglu/merch-tr-intent", "tr")
-en = load_dataset("gokhanustaosmanoglu/merch-tr-intent", "en")
+tr = load_dataset("gokhanustaosmanoglu/retail-merch-intent", "tr")
+en = load_dataset("gokhanustaosmanoglu/retail-merch-intent", "en")
 print(en["train"][0])
 ```
 
-Source and generator: https://github.com/gokhanustaosmanoglu/merch-tr-intent
+Source and generator: https://github.com/gokhanustaosmanoglu/retail-merch-intent
 
 ## Changelog
 
-- **v0.2** (2026-11): English config added; intents, slot names and canonical values switched to English for both languages (breaking change from v0.1); `lang` field; cross-lingual baseline.
+- **v0.2** (2026-11): renamed from `merch-tr-intent` to `retail-merch-intent` (old URLs redirect); English config added; intents, slot names and canonical values switched to English for both languages (breaking change from v0.1); `lang` field; cross-lingual baseline.
 - **v0.1** (2026-11): Turkish only, Turkish labels.
 
 ## License and citation

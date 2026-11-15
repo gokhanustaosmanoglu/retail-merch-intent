@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
-title: "merch-tr-intent: Retail Merchandising Intent & Slot Dataset (Turkish + English)"
+title: "retail-merch-intent: Retail Merchandising Intent & Slot Dataset (Turkish + English)"
 type: dataset
 version: "0.2"
 date-released: "2026-11-15"
@@ -8,8 +8,8 @@ license: CC-BY-4.0
 authors:
   - family-names: "Ustaosmanoglu"
     given-names: "Gokhan"
-repository-code: "https://github.com/gokhanustaosmanoglu/merch-tr-intent"
-url: "https://huggingface.co/datasets/gokhanustaosmanoglu/merch-tr-intent"
+repository-code: "https://github.com/gokhanustaosmanoglu/retail-merch-intent"
+url: "https://huggingface.co/datasets/gokhanustaosmanoglu/retail-merch-intent"
 keywords:
   - retail
   - merchandising

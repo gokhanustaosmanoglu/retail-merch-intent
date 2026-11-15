@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""merch-tr-intent v0.2 — retail merchandising question -> intent + slot dataset generator (Turkish + English).
+r"""retail-merch-intent v0.2 — retail merchandising question -> intent + slot dataset generator (Turkish + English).
 
 Both languages share ONE schema: same 18 intents, same 9 slots, same English canonical slot values.
 Templates are written independently per language (not machine-translated), so the two sides are
