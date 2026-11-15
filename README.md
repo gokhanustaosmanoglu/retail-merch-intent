@@ -97,11 +97,11 @@ sonuç dataset kartının altındaki tabloda (bkz. "Sonuçlar").
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("sdadsasdasdasdasd/merch-tr-intent")
+ds = load_dataset("gokhanustaosmanoglu/merch-tr-intent")
 print(ds["train"][0])
 ```
 
-Kaynak kod ve üretici: https://github.com/retrovirusretro/merch-tr-intent
+Kaynak kod ve üretici: https://github.com/gokhanustaosmanoglu/merch-tr-intent
 
 ## Lisans ve atıf
 
