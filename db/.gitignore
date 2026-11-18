@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Built by `python merchdb.py --out data` in about ten seconds; weekly.csv alone is 15 MB.
+data/
