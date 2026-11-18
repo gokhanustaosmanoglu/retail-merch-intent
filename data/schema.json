@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "languages": [
     "tr",
     "en"
@@ -103,12 +103,8 @@
       "THIS_SEASON",
       "THIS_WEEK",
       "TODAY",
-      "WEEK:38",
-      "WEEK:40",
-      "WEEK:42",
-      "WEEK:45",
-      "WEEK:46",
       "WEEK:BLACK_FRIDAY",
+      "WEEK:nn (01-52)",
       "WEEKEND",
       "YESTERDAY",
       "YTD"
@@ -147,12 +143,12 @@
   },
   "splits": {
     "tr": {
-      "train": 2091,
-      "test": 519
+      "train": 2100,
+      "test": 510
     },
     "en": {
-      "train": 2108,
-      "test": 502
+      "train": 2078,
+      "test": 532
     }
   },
   "split_method": "template-level holdout: test templates never appear in train",
