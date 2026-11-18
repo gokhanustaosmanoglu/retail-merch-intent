@@ -99,14 +99,14 @@ Each record: `id`, `text`, `intent`, `slots` (dict, may be empty), `lang`, `temp
 | `period` | TODAY, THIS_WEEK, LAST_WEEK, LAST_4_WEEKS, THIS_MONTH, MONTH:01–12, WEEK:01–52, THIS_SEASON, SEASON:WINTER/SUMMER, SEASON_TO_DATE, YTD … |
 | `store` | free text (city / district or 4-digit code); list if more than one |
 | `channel` | STORES, ECOMMERCE, OUTLET, WHOLESALE, CONCESSION, MARKETPLACE, FULL_PRICE_STORES, ALL |
-| `measure` | REVENUE, UNITS, MARGIN |
+| `measure` | REVENUE (net sales value, excluding VAT), UNITS, MARGIN |
 | `comparison` | LY, PLAN, BUDGET, LAST_WEEK |
 | `n` | integer (top-N) |
 | `season` | WINTER, SUMMER, SPRING, AUTUMN, NEW, OLD |
 
 ### Labelling policy
 
-A slot is labelled when the text names it explicitly, whether the word came from a placeholder or is written in the template ("ne kadar **ciro** yaptı" → `measure: REVENUE`, "**online** return rate" → `channel: ECOMMERCE`). Not labelled yet, pending a decision: implicit measures ("kaç sattı", "how many … sell"), `margin` as a measure inside the `margin` intent, warehouse / DC mentions (no slot for stock location), and plan / budget / LFL wording inside `budget_otb` and `growth`. The rules live in `IMPLIED` in `uret.py`.
+A slot is labelled when the text names it explicitly, whether the word came from a placeholder or is written in the template ("ne kadar **ciro** yaptı" → `measure: REVENUE`, "**online** return rate" → `channel: ECOMMERCE`). A sales question with no measure word means **units**: "kaç sattı", "ne kadar sattı" and "how many chinos did we sell" are all `measure: UNITS`; revenue is always asked for by name ("ciro"). Inside the `margin` intent no `measure` is written: the intent already says it. Known gap: that intent mixes different figures (gross margin %, gross profit, markup, GMROI) with no slot to tell them apart; a `metric` slot is planned for v0.4. The same principle applies to `budget_otb`: "bütçeye göre", "plan vs actual" do not add a `comparison`, because the intent already is the budget / plan question. Two more known gaps, also left for v0.4: stock location ("depo stoğu" vs "mağaza stoğu", warehouse / DC) has no slot, and LFL / like-for-like is a store-set filter with no slot. The rules live in `IMPLIED` in `uret.py`.
 
 ## Baseline
 
@@ -150,7 +150,7 @@ Source and generator: https://github.com/gokhanustaosmanoglu/retail-merch-intent
 
 ## Changelog
 
-- **v0.3** (2026-11): data-quality release, all rows regenerated (ids changed). `out_of_scope` is now template-held-out like every other intent (in v0.2 its test sentences also appeared in train); new `template_id` field; Turkish-aware casing (no more `i̇zmir` with a combining dot, store values like `ÜMRANİYE` instead of `ÜMRANIYE`); no repeated words ("top top 20") or contradictions ("worst top 20"); week numbers cover 01–52 instead of five fixed weeks; explicit measure / channel words in templates are labelled; " today" no longer appended as decoration; generator no longer aborts on non-UTF-8 consoles; tests added. `token-classification` removed from the card until span annotations exist.
+- **v0.3** (2026-11): data-quality release, all rows regenerated (ids changed). `out_of_scope` is now template-held-out like every other intent (in v0.2 its test sentences also appeared in train); new `template_id` field; Turkish-aware casing (no more `i̇zmir` with a combining dot, store values like `ÜMRANİYE` instead of `ÜMRANIYE`); no repeated words ("top top 20") or contradictions ("worst top 20"); week numbers cover 01–52 instead of five fixed weeks; explicit measure / channel words in templates are labelled, and sales questions with no measure word are labelled `UNITS` (see Labelling policy); `REVENUE` defined as net of VAT; " today" no longer appended as decoration; generator no longer aborts on non-UTF-8 consoles; tests added. `token-classification` removed from the card until span annotations exist.
 - **v0.2** (2026-11): renamed from `merch-tr-intent` to `retail-merch-intent` (old URLs redirect); English config added; intents, slot names and canonical values switched to English for both languages (breaking change from v0.1); `lang` field; cross-lingual baseline.
 - **v0.1** (2026-11): Turkish only, Turkish labels.
 
