@@ -177,11 +177,29 @@ def test_decoration_never_adds_an_unlabelled_period(data):
     ("en", "{m} revenue {d}", "measure", "REVENUE"),
     ("en", "{d} {u} units sold", "measure", "UNITS"),
     ("en", "{d} online return rate for {u}", "channel", "ECOMMERCE"),
+    # owner's rule: a sales question with no measure word means units; revenue is always asked for by name
+    ("tr", "{c} {u} {d} kaç sattı", "measure", "UNITS"),
+    ("tr", "{u} {d} {k} ne kadar satmış", "measure", "UNITS"),
+    ("tr", "{d} {c} {u} satışı ne kadar", "measure", "UNITS"),
+    ("tr", "{s} {u} satışı {d} kaç", "measure", "UNITS"),
+    ("en", "how many {u} did {c} sell {d}", "measure", "UNITS"),
 ])
 def test_explicit_literal_in_template_is_labelled(lang, template, slot, value):
     random.seed(1)
     _, slots = uret.fill(template, lang)
     assert slots.get(slot) == value
+
+
+@pytest.mark.parametrize("lang,template", [
+    ("tr", "{c} {u} cover kaç hafta"),            # "kaç" counts weeks here, not units
+    ("tr", "{u} {d} {y} yüzde kaç arttı"),        # a percentage
+    ("en", "how many weeks of stock for {u}"),
+    ("en", "how many cartons went to {m} {d}"),
+])
+def test_how_many_of_something_else_is_not_units(lang, template):
+    random.seed(1)
+    _, slots = uret.fill(template, lang)
+    assert "measure" not in slots
 
 
 def test_placeholder_value_wins_over_literal_rule():

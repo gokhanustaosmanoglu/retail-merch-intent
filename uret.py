@@ -332,13 +332,16 @@ IMPLIED = {
         (r"\bciro", "measure", "REVENUE"),
         (r"\b(adet|adedi|tane)\b", "measure", "UNITS"),
         (r"e-ticaret", "channel", "ECOMMERCE"),
-        # TODO(human): ambiguous cases — see README "Labelling policy"
+        # A sales question with no measure word means units ("kaç sattı" = "ne kadar sattı"); revenue is asked by name.
+        (r"kaç sattı|ne kadar sat(tı|mış)|satışı ne kadar|satışı \{d\} kaç", "measure", "UNITS"),
+        # Deliberately no rule for marj / bütçe / plan (the intent says it) or depo / LFL (no slot yet) — README "Labelling policy"
     ],
     "en": [
         (r"\brevenue\b", "measure", "REVENUE"),
         (r"\bunits?\b", "measure", "UNITS"),
         (r"\bonline\b", "channel", "ECOMMERCE"),
-        # TODO(human): ambiguous cases — see README "Labelling policy"
+        (r"how many \{u\}", "measure", "UNITS"),  # "how many chinos ..." counts the product; "how many weeks/cartons" does not
+        # Deliberately no rule for margin / budget / plan (the intent says it) or warehouse / LFL (no slot yet)
     ],
 }
 
