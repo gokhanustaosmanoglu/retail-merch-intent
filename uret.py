@@ -14,7 +14,7 @@ Output:
   data/schema.json
 Test split is template-level: test templates are never seen in training -> measures generalisation.
 """
-import json, random, re, hashlib
+import json, random, re, hashlib, sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -48,7 +48,7 @@ TR["period"] = {
     "son 4 hafta": "LAST_4_WEEKS", "son dört haftada": "LAST_4_WEEKS", "bu ay": "THIS_MONTH", "geçen ay": "LAST_MONTH",
     "bu sezon": "THIS_SEASON", "kış sezonunda": "SEASON:WINTER", "yaz sezonunda": "SEASON:SUMMER", "sezon başından beri": "SEASON_TO_DATE",
     "yılbaşından beri": "YTD", "yıl başından bu yana": "YTD", "YTD": "YTD",
-    "42. hafta": "WEEK:42", "45. haftada": "WEEK:45", "W46": "WEEK:46", "W40'ta": "WEEK:40", "38. hafta": "WEEK:38",
+    "{w}. hafta": "WEEK:{w}", "{w}. haftada": "WEEK:{w}", "W{w}": "WEEK:{w}", "hafta {w}": "WEEK:{w}",  # {w} -> random week 1-52
     "son çeyrekte": "LAST_QUARTER", "hafta sonu": "WEEKEND", "Black Friday haftasında": "WEEK:BLACK_FRIDAY",
 }
 for i, ay in enumerate(["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]):
@@ -60,13 +60,13 @@ TR["measure"] = {"ciro": "REVENUE", "ciroda": "REVENUE", "TL bazında": "REVENUE
 TR["comparison"] = {"geçen yıla göre": "LY", "GY'ye göre": "LY", "geçen seneye göre": "LY", "LY'ye göre": "LY", "plana göre": "PLAN", "bütçeye göre": "BUDGET",
                     "geçen haftaya göre": "LAST_WEEK", "hedefe göre": "PLAN"}
 TR["season"] = {"kış": "WINTER", "yaz": "SUMMER", "ilkbahar": "SPRING", "sonbahar": "AUTUMN", "yeni sezon": "NEW", "eski sezon": "OLD", "geçen sezon": "OLD"}
-TR["n"] = ["5", "10", "20", "ilk 10", "en iyi 5", "top 20"]
+TR["n"] = ["5", "10", "20"]  # bare numbers: the ranking word (top / en iyi / en kötü) belongs to the template
 TR["store_city"] = ["Ankara", "İzmir", "Bursa", "Antalya", "Adana", "Konya", "Samsun", "Trabzon", "Eskişehir", "Gaziantep",
                     "Kayseri", "Mersin", "Diyarbakır", "Denizli", "Kocaeli", "Sakarya", "Malatya", "Erzurum", "Van", "Muğla"]
 TR["store_district"] = ["Kadıköy", "Nişantaşı", "Bakırköy", "Beylikdüzü", "Ümraniye", "Ataşehir", "Maltepe", "Şişli", "Bağcılar", "Pendik",
                         "Alsancak", "Bornova", "Nilüfer", "Çankaya", "Keçiören", "Konyaaltı", "Seyhan", "Atakum", "Selçuklu", "Tepebaşı"]
 TR["store_suffix_a"] = ["", " merkez", " AVM", " outlet", " cadde"]
-TR["store_suffix_b"] = ["", " mağazası", " AVM"]
+TR["store_suffix_b"] = ["", " AVM"]  # no " mağazası": templates already say "{m} mağazası"
 TR["prefix"] = ["", "", "", "", "Merhaba, ", "Selam, ", "Acil: ", "Hızlıca ", "Bir bakar mısın, ", "Soru: ", "Kısaca ", "Lütfen "]
 TR["suffix"] = ["", "", "", "?", "?", " ?", " lütfen", " bakar mısın", " paylaşır mısın", " çıkarır mısın", " söyler misin", " rica ederim", " acil"]
 TR["question_end"] = r"\b(mı|mi|mu|mü|mısın|misin|miyiz|mıyız|musun|müsün|verir misin|var mı)$"
@@ -196,7 +196,7 @@ EN["period"] = {
     "L4W": "LAST_4_WEEKS", "this month": "THIS_MONTH", "MTD": "THIS_MONTH", "last month": "LAST_MONTH",
     "this season": "THIS_SEASON", "in the winter season": "SEASON:WINTER", "this summer season": "SEASON:SUMMER",
     "season to date": "SEASON_TO_DATE", "STD": "SEASON_TO_DATE", "year to date": "YTD", "YTD": "YTD",
-    "week 42": "WEEK:42", "in week 45": "WEEK:45", "W46": "WEEK:46", "wk40": "WEEK:40", "week 38": "WEEK:38",
+    "week {w}": "WEEK:{w}", "in week {w}": "WEEK:{w}", "W{w}": "WEEK:{w}", "wk{w}": "WEEK:{w}",  # {w} -> random week 1-52
     "last quarter": "LAST_QUARTER", "over the weekend": "WEEKEND", "Black Friday week": "WEEK:BLACK_FRIDAY",
 }
 for i, mo in enumerate(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]):
@@ -209,7 +209,7 @@ EN["comparison"] = {"vs last year": "LY", "vs LY": "LY", "versus last year": "LY
                     "vs budget": "BUDGET", "vs last week": "LAST_WEEK", "against target": "PLAN"}
 EN["season"] = {"winter": "WINTER", "summer": "SUMMER", "spring": "SPRING", "autumn": "AUTUMN", "fall": "AUTUMN", "new season": "NEW",
                 "old season": "OLD", "last season": "OLD"}
-EN["n"] = ["5", "10", "20", "top 10", "top 5", "top 20"]
+EN["n"] = ["5", "10", "20"]  # bare numbers: the ranking word (top / worst / bottom) belongs to the template
 EN["store_city"] = ["Manchester", "Lyon", "Munich", "Madrid", "Milan", "Rotterdam", "Warsaw", "Dublin", "Istanbul", "Ankara",
                     "Izmir", "Leeds", "Hamburg", "Porto", "Vienna", "Prague", "Athens", "Lisbon", "Brussels", "Copenhagen"]
 EN["store_district"] = ["Oxford Street", "Westfield", "Bluewater", "La Defense", "Kadikoy", "Nisantasi", "Soho", "Covent Garden",
@@ -217,7 +217,7 @@ EN["store_district"] = ["Oxford Street", "Westfield", "Bluewater", "La Defense",
 EN["store_suffix_a"] = ["", " flagship", " mall", " outlet", " high street"]
 EN["store_suffix_b"] = ["", " store", " branch"]
 EN["prefix"] = ["", "", "", "", "Hi, ", "Hey, ", "Quick one: ", "Can you check ", "Please ", "Q: ", "Urgent: "]
-EN["suffix"] = ["", "", "", "?", "?", " please", " pls", " asap", " thanks", " today"]
+EN["suffix"] = ["", "", "", "?", "?", " please", " pls", " asap", " thanks"]  # no " today": it is a period value, not decoration
 EN["question_end"] = r"\b(is|are|do|does|did|can|will|has|have)\b.*$"
 
 EN["templates"] = {
@@ -324,7 +324,55 @@ LEX = {"tr": TR, "en": EN}
 SLOT_KEYS = {"c": "gender", "u": "product_group", "d": "period", "k": "channel", "o": "measure", "y": "comparison", "s": "season"}
 
 
-def store(L):
+# Words written literally in a template (no placeholder) that still name a slot value.
+# Rule format: (regex matched against the TEMPLATE, slot, canonical value). A placeholder for the same slot wins.
+# Policy so far: label only what the text says explicitly.
+IMPLIED = {
+    "tr": [
+        (r"\bciro", "measure", "REVENUE"),
+        (r"\b(adet|adedi|tane)\b", "measure", "UNITS"),
+        (r"e-ticaret", "channel", "ECOMMERCE"),
+        # A sales question with no measure word means units ("kaç sattı" = "ne kadar sattı"); revenue is asked by name.
+        (r"kaç sattı|ne kadar sat(tı|mış)|satışı ne kadar|satışı \{d\} kaç", "measure", "UNITS"),
+        # Deliberately no rule for marj / bütçe / plan (the intent says it) or depo / LFL (no slot yet) — README "Labelling policy"
+    ],
+    "en": [
+        (r"\brevenue\b", "measure", "REVENUE"),
+        (r"\bunits?\b", "measure", "UNITS"),
+        (r"\bonline\b", "channel", "ECOMMERCE"),
+        (r"how many \{u\}", "measure", "UNITS"),  # "how many chinos ..." counts the product; "how many weeks/cartons" does not
+        # Deliberately no rule for margin / budget / plan (the intent says it) or warehouse / LFL (no slot yet)
+    ],
+}
+
+
+def _tr_token_lower(tok):
+    if tok.isascii() and tok.isupper():  # English acronym inside Turkish text (GMROI, YTD, W46)
+        return tok.lower()
+    return tok.replace("İ", "i").replace("I", "ı").lower()
+
+
+def lower(text, lang):
+    """str.lower() is locale-blind: 'İ' becomes 'i' + U+0307 and 'I' never becomes 'ı'."""
+    if lang != "tr":
+        return text.lower()
+    return re.sub(r"\S+", lambda m: _tr_token_lower(m.group()), text)
+
+
+def upper(text, lang):
+    if lang != "tr":
+        return text.upper()
+    return text.replace("i", "İ").replace("ı", "I").upper()
+
+
+def stutter(text, lang):
+    """True if a word or a two-word phrase is immediately repeated ('top top 20', 'en iyi en iyi 5')."""
+    w = re.findall(r"\w+", lower(text, lang))
+    return any(w[i] == w[i + 1] for i in range(len(w) - 1)) or any(w[i:i + 2] == w[i + 2:i + 4] for i in range(len(w) - 3))
+
+
+def store(lang):
+    L = LEX[lang]
     r = random.random()
     if r < 0.4:
         ad = random.choice(L["store_city"]) + random.choice(L["store_suffix_a"])
@@ -333,17 +381,26 @@ def store(L):
     else:
         ad = str(random.randint(1001, 1999))
     ad = ad.strip()
-    return ad, ad.upper()
+    return ad, upper(ad, lang)
 
 
-def fill(template, L):
+def fill(template, lang):
+    L = LEX[lang]
     slots, text = {}, template
     for ph, key in SLOT_KEYS.items():
         token = "{" + ph + "}"
         if token in text:
-            surf = random.choice(list(L[key])); text = text.replace(token, surf); slots[key] = L[key][surf]
+            surf = random.choice(list(L[key])); val = L[key][surf]
+            if "{w}" in surf:
+                w = random.randint(1, 52); surf = surf.replace("{w}", str(w)); val = f"WEEK:{w:02d}"
+            text = text.replace(token, surf); slots[key] = val
+    for pattern, key, val in IMPLIED[lang]:
+        if key not in slots and re.search(pattern, template):
+            slots[key] = val
     while "{m}" in text:
-        surf, val = store(L); text = text.replace("{m}", surf, 1); slots.setdefault("store", []).append(val)
+        surf, val = store(lang)
+        if val in slots.get("store", []): continue  # "X ile X arasında transfer" is meaningless
+        text = text.replace("{m}", surf, 1); slots.setdefault("store", []).append(val)
     if "{n}" in text:
         surf = random.choice(L["n"]); text = text.replace("{n}", surf); slots["n"] = int(re.sub(r"\D", "", surf))
     if "store" in slots and len(slots["store"]) == 1:
@@ -356,9 +413,9 @@ def fill(template, L):
     text = prefix + text + suffix
     r = random.random()
     if r < 0.25:
-        text = text.lower()
+        text = lower(text, lang)
     elif r < 0.35:
-        text = text[0].upper() + text[1:]
+        text = upper(text[0], lang) + text[1:]
     text = re.sub(r"\s+", " ", text).strip()
     text = re.sub(r"\s+\?", "?", text)
     return text, slots
@@ -370,39 +427,38 @@ def generate(lang, seed, per_intent=150, oos=60):
     test_tpl = {}
     for intent, tpls in T.items():
         s = tpls[:]; random.shuffle(s)
-        test_tpl[intent] = set(s[: max(1, round(len(s) * 0.2))]) if intent != "out_of_scope" else set()
+        test_tpl[intent] = set(s[: max(1, round(len(s) * 0.2))])  # every intent, out_of_scope included
     rows, seen = [], set()
     for intent, tpls in T.items():
         target = oos if intent == "out_of_scope" else per_intent
         n = tries = 0
         while n < target and tries < target * 30:
             tries += 1
-            tpl = random.choice(tpls)
+            ti = random.randrange(len(tpls)); tpl = tpls[ti]
             if intent == "out_of_scope":
                 text = random.choice(["", "", "", L["prefix"][4], L["prefix"][5]]) + tpl + random.choice(["", "", "?", "!", "."])
                 text = re.sub(r"\s+\?", "?", text).strip(); slots = {}
-                if random.random() < 0.3: text = text.lower()
-                elif random.random() < 0.5: text = text[0].upper() + text[1:]
+                if random.random() < 0.3: text = lower(text, lang)
+                elif random.random() < 0.5: text = upper(text[0], lang) + text[1:]
             else:
-                text, slots = fill(tpl, L)
-            key = text.lower()
-            if key in seen: continue
+                text, slots = fill(tpl, lang)
+            key = lower(text, lang)
+            if key in seen or stutter(text, lang): continue
             seen.add(key); n += 1
             rows.append({"id": f"{lang}-" + hashlib.md5(key.encode()).hexdigest()[:10], "text": text, "intent": intent,
-                         "slots": slots, "lang": lang, "_split": "test" if tpl in test_tpl[intent] else "train"})
+                         "slots": slots, "lang": lang, "template_id": f"{lang}-{intent}-{ti:02d}",
+                         "_split": "test" if tpl in test_tpl[intent] else "train"})
     random.shuffle(rows)
     train = [r for r in rows if r["_split"] == "train"]; test = [r for r in rows if r["_split"] == "test"]
-    oos_rows = [r for r in train if r["intent"] == "out_of_scope"]; random.shuffle(oos_rows)
-    for r in oos_rows[: round(len(oos_rows) * 0.15)]:
-        train.remove(r); test.append(r)
     return train, test, {i: len(t) for i, t in T.items()}
 
 
 def main():
-    schema = {"version": "0.2", "languages": ["tr", "en"], "intents": sorted(TR["templates"]), "slots": {}, "splits": {},
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # piped / cp1252 Windows consoles cannot print 'ı', 'ş'
+    schema = {"version": "0.3", "languages": ["tr", "en"], "intents": sorted(TR["templates"]), "slots": {}, "splits": {},
               "split_method": "template-level holdout: test templates never appear in train", "templates": {}}
     for key in ["gender", "product_group", "period", "channel", "measure", "comparison", "season"]:
-        schema["slots"][key] = sorted(set(TR[key].values()) | set(EN[key].values()))
+        schema["slots"][key] = sorted({v.replace("{w}", "nn (01-52)") for v in set(TR[key].values()) | set(EN[key].values())})
     schema["slots"]["store"] = "free text (city / district name or 4-digit code), list if more than one"
     schema["slots"]["n"] = "integer (top-N)"
     assert set(TR["templates"]) == set(EN["templates"]), "intent sets differ"

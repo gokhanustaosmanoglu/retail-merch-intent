@@ -7,7 +7,6 @@ multilinguality:
   - multilingual
 task_categories:
   - text-classification
-  - token-classification
 task_ids:
   - intent-classification
 tags:
@@ -57,16 +56,16 @@ Merchandisers, planners and allocators ask the same questions every day: *how mu
 
 As far as we found, no public intent dataset covers the retail-merchandising domain. General assistant datasets such as [MASSIVE](https://huggingface.co/datasets/AmazonScience/massive) (51 languages, alarm/music/weather) and retail text-to-SQL benchmarks exist, but nothing for merchandising intents.
 
-## Contents (v0.2)
+## Contents (v0.3)
 
-| config | train | test | note |
-|---|---|---|---|
-| `tr` (default) | 2,091 | 519 | Turkish |
-| `en` | 2,108 | 502 | English |
+| config | train | test | test templates | note |
+|---|---|---|---|---|
+| `tr` (default) | 2,100 | 510 | 51 | Turkish |
+| `en` | 2,078 | 532 | 49 | English |
 
-Test splits are **template-held-out**: test templates never appear in training, so scores measure generalisation, not memorisation. The two languages share intents, slots and canonical slot values; templates were written independently per language (schema-parallel, not sentence-parallel).
+Test splits are **template-held-out** for every intent, `out_of_scope` included: test templates never appear in training, so scores measure generalisation, not memorisation. Read the test size honestly: ~500 rows come from ~50 templates (2–3 per intent), so a single split can move by a few points. Every row carries a `template_id`; use it as the group key for grouped cross-validation over train + test if you need a variance estimate. The two languages share intents, slots and canonical slot values; templates were written independently per language (schema-parallel, not sentence-parallel).
 
-Each record: `id`, `text`, `intent`, `slots` (dict, may be empty), `lang`.
+Each record: `id`, `text`, `intent`, `slots` (dict, may be empty), `lang`, `template_id`.
 
 ### Intents (18)
 
@@ -97,15 +96,21 @@ Each record: `id`, `text`, `intent`, `slots` (dict, may be empty), `lang`.
 |---|---|
 | `gender` | MEN, WOMEN, BOYS, GIRLS, KIDS, BABY, ALL |
 | `product_group` | COAT, OVERCOAT, OUTERWEAR, KNITWEAR, SWEATER, SHIRT, TSHIRT, POLO, CHINO, JEANS, TROUSERS, SHOES, SOCKS, BAG, UNDERWEAR … (41 values, see `data/schema.json`) |
-| `period` | TODAY, THIS_WEEK, LAST_WEEK, LAST_4_WEEKS, THIS_MONTH, MONTH:01–12, WEEK:nn, THIS_SEASON, SEASON:WINTER/SUMMER, SEASON_TO_DATE, YTD … |
+| `period` | TODAY, THIS_WEEK, LAST_WEEK, LAST_4_WEEKS, THIS_MONTH, MONTH:01–12, WEEK:01–52, THIS_SEASON, SEASON:WINTER/SUMMER, SEASON_TO_DATE, YTD … |
 | `store` | free text (city / district or 4-digit code); list if more than one |
 | `channel` | STORES, ECOMMERCE, OUTLET, WHOLESALE, CONCESSION, MARKETPLACE, FULL_PRICE_STORES, ALL |
-| `measure` | REVENUE, UNITS, MARGIN |
+| `measure` | REVENUE (net sales value, excluding VAT), UNITS, MARGIN |
 | `comparison` | LY, PLAN, BUDGET, LAST_WEEK |
 | `n` | integer (top-N) |
 | `season` | WINTER, SUMMER, SPRING, AUTUMN, NEW, OLD |
 
+### Labelling policy
+
+A slot is labelled when the text names it explicitly, whether the word came from a placeholder or is written in the template ("ne kadar **ciro** yaptı" → `measure: REVENUE`, "**online** return rate" → `channel: ECOMMERCE`). A sales question with no measure word means **units**: "kaç sattı", "ne kadar sattı" and "how many chinos did we sell" are all `measure: UNITS`; revenue is always asked for by name ("ciro"). Inside the `margin` intent no `measure` is written: the intent already says it. Known gap: that intent mixes different figures (gross margin %, gross profit, markup, GMROI) with no slot to tell them apart; a `metric` slot is planned for v0.4. The same principle applies to `budget_otb`: "bütçeye göre", "plan vs actual" do not add a `comparison`, because the intent already is the budget / plan question. Two more known gaps, also left for v0.4: stock location ("depo stoğu" vs "mağaza stoğu", warehouse / DC) has no slot, and LFL / like-for-like is a store-set filter with no slot. The rules live in `IMPLIED` in `uret.py`.
+
 ## Baseline
+
+> The numbers below were measured on the **v0.2** data and have not been re-run on v0.3 yet (`python baseline.py`).
 
 Frozen `intfloat/multilingual-e5-small` embeddings + nearest centroid, intent accuracy on the template-held-out test sets (`baseline.py`):
 
@@ -122,7 +127,15 @@ The hard pairs are deliberate: `broken_sizes` vs `transfer`, `transfer` vs `stoc
 
 Fully **synthetic**: hand-written templates per intent and language, filled from a generic retail vocabulary (`uret.py`), with surface variation (greetings, polite suffixes, casing). Store names are city / district names or random 4-digit codes. **No company data, real store identifiers, product codes or sales figures.**
 
-Limitations (v0.2): template-based, so natural variety is limited; single-intent questions only (no "sales and cover" combos); slots are canonical values, not character spans; English and Turkish are not sentence-aligned.
+Limitations (v0.3): template-based, so natural variety is limited; single-intent questions only (no "sales and cover" combos); slots are canonical values, not character spans; English and Turkish are not sentence-aligned; `out_of_scope` is small (26 templates, 11 test rows per language), so out-of-scope detection is under-measured.
+
+Regenerate and test:
+
+```bash
+pip install -r requirements.txt
+python uret.py
+python -m pytest -q
+```
 
 ## Usage
 
@@ -137,6 +150,7 @@ Source and generator: https://github.com/gokhanustaosmanoglu/retail-merch-intent
 
 ## Changelog
 
+- **v0.3** (2026-11): data-quality release, all rows regenerated (ids changed). `out_of_scope` is now template-held-out like every other intent (in v0.2 its test sentences also appeared in train); new `template_id` field; Turkish-aware casing (no more `i̇zmir` with a combining dot, store values like `ÜMRANİYE` instead of `ÜMRANIYE`); no repeated words ("top top 20") or contradictions ("worst top 20"); week numbers cover 01–52 instead of five fixed weeks; explicit measure / channel words in templates are labelled, and sales questions with no measure word are labelled `UNITS` (see Labelling policy); `REVENUE` defined as net of VAT; " today" no longer appended as decoration; generator no longer aborts on non-UTF-8 consoles; tests added. `token-classification` removed from the card until span annotations exist.
 - **v0.2** (2026-11): renamed from `merch-tr-intent` to `retail-merch-intent` (old URLs redirect); English config added; intents, slot names and canonical values switched to English for both languages (breaking change from v0.1); `lang` field; cross-lingual baseline.
 - **v0.1** (2026-11): Turkish only, Turkish labels.
 
@@ -153,7 +167,7 @@ Perakende **merchandising / planlama** sorularını yapılandırılmış sorguya
 Amaç: "chino bu hafta kaç sattı, cover kaç?" gibi günlük soruları bir dil modeline SQL yazdırmadan, önceden onaylı sorgu şablonlarına yönlendirmek. Model yalnız **soru tipi** ve **parametreler** kararını verir; rakamı veri kaynağı hesaplar. Yanlış rakam riski sıfırlanır.
 
 - `tr` (varsayılan) ve `en` olmak üzere iki yapılandırma; her birinde ~2.100 eğitim, ~500 test kaydı.
-- Test bölmesi **şablon düzeyinde ayrık**: test şablonları eğitimde hiç görülmez.
+- Test bölmesi **şablon düzeyinde ayrık** (`out_of_scope` dahil): test şablonları eğitimde hiç görülmez. ~500 test satırı ~50 şablondan gelir; varyans ölçmek için `template_id` alanıyla gruplu çapraz doğrulama yapılabilir.
 - Intent, slot adları ve kanonik değerler iki dilde de İngilizcedir (v0.2'de değişti); bu sayede Türkçe ve İngilizce aynı sorgu şablonlarına bağlanır.
 - Tamamen sentetik; hiçbir şirkete ait veri, mağaza, ürün kodu ya da rakam içermez.
-- Taban çizgisi yukarıdaki tabloda; Türkçe-Türkçe %72,6, İngilizceden Türkçeye aktarım %63,4.
+- Taban çizgisi yukarıdaki tabloda (v0.2 verisiyle ölçüldü, v0.3 için henüz yeniden koşulmadı); Türkçe-Türkçe %72,6, İngilizceden Türkçeye aktarım %63,4.
